@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1aa92664bb2a2e4098a79ed4ef8627a, type: 3}
+  m_Name: Goblin
+  m_EditorClassIdentifier: Assembly-CSharp::UnitData
+  unitName: Goblin
+  maxHP: 10
+  currentHP: 0
+  moveRange: 3
+  attackRange: 1
+  level: 1
+  currentEXP: 0
+  expToNextLevel: 0
+  startItems:
+  - itemName: Bandage
+    type: 0
+    id: 2
+    value: 3
+  startWeapons:
+  - weaponName: Monster knife
+    id: 5
+    minRange: 1
+    maxRange: 1
+    damage: 3

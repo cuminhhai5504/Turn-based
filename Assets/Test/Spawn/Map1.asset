@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd431bf5bf5f02458643a4a09b7e3dd, type: 3}
+  m_Name: Map1
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnConfig
+  units:
+  - prefab: {fileID: 6030046502504930667, guid: fb6c69187f2fa42408a81457fb1e6867, type: 3}
+    gridPosition: {x: 1, y: 1}
+    isEnemy: 0
+  - prefab: {fileID: 6030046502504930667, guid: fb6c69187f2fa42408a81457fb1e6867, type: 3}
+    gridPosition: {x: 2, y: 3}
+    isEnemy: 0
+  - prefab: {fileID: 6030046502504930667, guid: fb6c69187f2fa42408a81457fb1e6867, type: 3}
+    gridPosition: {x: 3, y: 3}
+    isEnemy: 0
+  - prefab: {fileID: 508935201325878969, guid: 90a6995349ded9c498b1faa4c824b307, type: 3}
+    gridPosition: {x: 5, y: 2}
+    isEnemy: 1
+  - prefab: {fileID: 6281803258960879586, guid: 8d31d998e5c95a048a68330c66d40fc3, type: 3}
+    gridPosition: {x: 5, y: 3}
+    isEnemy: 1
+  - prefab: {fileID: 6281803258960879586, guid: 8d31d998e5c95a048a68330c66d40fc3, type: 3}
+    gridPosition: {x: 3, y: 0}
+    isEnemy: 1

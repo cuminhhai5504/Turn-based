@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1aa92664bb2a2e4098a79ed4ef8627a, type: 3}
+  m_Name: Archer
+  m_EditorClassIdentifier: Assembly-CSharp::UnitData
+  prefab: {fileID: 6281803258960879586, guid: 8d31d998e5c95a048a68330c66d40fc3, type: 3}
+  unitName: Archer
+  maxHP: 10
+  currentHP: 0
+  moveRange: 3
+  attackRange: 1
+  level: 1
+  currentEXP: 0
+  expToNextLevel: 0
+  startItems:
+  - itemName: Healing Potion
+    type: 0
+    id: 1
+    value: 5
+  startWeapons:
+  - weaponName: Bow
+    id: 3
+    minRange: 2
+    maxRange: 2
+    damage: 4
