@@ -14,8 +14,10 @@ public class UnitInfoUI : MonoBehaviour
     public Text hpText;
     public Text maxHPText;
     public Text moveRangeText;
-    public Text expText;
-    public Text expToNextText;
+    public UnitInventoryUI inventoryUI;
+    private Unit currentUnit;
+    public Image itemImage;
+    public Image weaponImage;
 
     void Awake()
     {
@@ -28,6 +30,7 @@ public class UnitInfoUI : MonoBehaviour
     }
     public void Show(Unit unit)
     {
+        currentUnit = unit;
         panel.SetActive(true);
         panel.transform.localScale = Vector3.zero;
         panel.transform.DOScale(1f, 0.3f).SetEase(Ease.OutBack);
@@ -36,9 +39,20 @@ public class UnitInfoUI : MonoBehaviour
         hpText.text = unit.currentHP.ToString();
         maxHPText.text = unit.maxHP.ToString();
         moveRangeText.text = unit.moveRange.ToString();
-        expText.text = unit.currentEXP.ToString();
-        expToNextText.text = unit.expToNextLevel.ToString();  
+        
+    }
+    public void OnShowItems()
+    {
+        inventoryUI.ShowItems(currentUnit);
+        itemImage.gameObject.SetActive(true);
+        weaponImage.gameObject.SetActive(false);
     }
 
-    
+    public void OnShowWeapons()
+    {
+        inventoryUI.ShowWeapons(currentUnit);
+        itemImage.gameObject.SetActive(false);
+        weaponImage.gameObject.SetActive(true);
+    }
+
 }

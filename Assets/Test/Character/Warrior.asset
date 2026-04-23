@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1aa92664bb2a2e4098a79ed4ef8627a, type: 3}
   m_Name: Warrior
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
-  prefab: {fileID: 8825122912666530086, guid: 90b7e5583f7feb9469c32afbf0694feb, type: 3}
   unitName: Warrior
   maxHP: 15
   currentHP: 0
@@ -36,3 +35,5 @@ MonoBehaviour:
     minRange: 1
     maxRange: 1
     damage: 5
+    maxDurability: 2
+    currentDurability: 2

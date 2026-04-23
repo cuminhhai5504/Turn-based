@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     public GameObject itemPanel;
     public GameObject itemActionPanel;
     public GameObject actionMenuPanel;
+    public GameObject listPanel;
     public Image fadePanel;
     void Awake()
     {
@@ -57,6 +58,7 @@ public class UIManager : MonoBehaviour
         ClosePanel(itemPanel);
         ClosePanel(itemActionPanel);
         ClosePanel(actionMenuPanel);
+        ClosePanel(listPanel);
     }
     void ClosePanel(GameObject panel)
     {
@@ -76,7 +78,8 @@ public class UIManager : MonoBehaviour
             || unitinfoPanel.activeSelf
             || itemPanel.activeSelf
             || itemActionPanel.activeSelf
-            || actionMenuPanel.activeSelf;
+            || actionMenuPanel.activeSelf
+            || listPanel.activeSelf;
             
     }
     void Update()

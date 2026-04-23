@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1aa92664bb2a2e4098a79ed4ef8627a, type: 3}
   m_Name: Lancer
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
-  prefab: {fileID: 5046861515965368886, guid: 262ed582a134a99448dff5b4a92119b6, type: 3}
   unitName: Lancer
   maxHP: 15
   currentHP: 0
@@ -36,3 +35,5 @@ MonoBehaviour:
     minRange: 1
     maxRange: 2
     damage: 3
+    maxDurability: 10
+    currentDurability: 10

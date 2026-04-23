@@ -13,8 +13,7 @@ public class LevelUpUI : MonoBehaviour
     public Text hpOld, hpNew;
     public Text maxhpOld, maxhpNew;
     public Text moveOld, moveNew;
-    public Text expOld, expNew;
-    public Text expToNextOld, expToNexNew;
+    
     public bool IsShowing()
     {
         return panel.activeSelf;
@@ -58,11 +57,6 @@ public class LevelUpUI : MonoBehaviour
         // MoveR
         moveOld.text = oldStats.moveRange.ToString();
         moveNew.text = newStats.moveRange.ToString();
-        //EXP
-        expOld.text = oldStats.currentExp.ToString();
-        expNew.text = newStats.currentExp.ToString();
-        //EXPtoNext
-        expToNextOld.text = oldStats.expToNext.ToString();
-        expToNexNew.text = newStats.expToNext.ToString(); 
+        
     }
 }

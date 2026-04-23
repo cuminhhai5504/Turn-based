@@ -31,3 +31,5 @@ MonoBehaviour:
     minRange: 1
     maxRange: 1
     damage: 3
+    maxDurability: 10
+    currentDurability: 10

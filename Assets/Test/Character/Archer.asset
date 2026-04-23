@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1aa92664bb2a2e4098a79ed4ef8627a, type: 3}
   m_Name: Archer
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
-  prefab: {fileID: 6281803258960879586, guid: 8d31d998e5c95a048a68330c66d40fc3, type: 3}
   unitName: Archer
   maxHP: 10
   currentHP: 0
@@ -32,3 +31,5 @@ MonoBehaviour:
     minRange: 2
     maxRange: 2
     damage: 4
+    maxDurability: 10
+    currentDurability: 10

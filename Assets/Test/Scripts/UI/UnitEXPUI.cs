@@ -35,4 +35,11 @@ public class UnitEXPUI : MonoBehaviour
         yield return new WaitForSeconds(2f);
         expBarRoot.SetActive(false);
     }
+    public void ShowInstant(int current, int max)
+    {
+        expBarRoot.SetActive(true);
+
+        slider.value = (float)current / max;
+        expText.text = current + "/" + max;
+    }
 }

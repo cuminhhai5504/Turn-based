@@ -52,6 +52,22 @@ public class UnitController : MonoBehaviour
 
         return false;
     }
+    Unit GetUnitAt(Vector2Int pos)
+    {
+        foreach (var u in TurnManager.Instance.playerUnits)
+        {
+            if (u != null && u.gridPosition == pos)
+                return u;
+        }
+
+        foreach (var u in TurnManager.Instance.enemyUnits)
+        {
+            if (u != null && u.gridPosition == pos)
+                return u;
+        }
+
+        return null;
+    }
     bool HasEnemyInRange(Unit unit)
     {
         foreach (var enemy in TurnManager.Instance.enemyUnits)
@@ -162,6 +178,12 @@ public class UnitController : MonoBehaviour
 
             if (unit != null && !unit.isEnemy)
             {
+                // 🔥 nếu đang chọn unit khác → reset rồi chọn mới
+                if (selectedUnit != null && selectedUnit != unit)
+                {
+                    CancelSelection(); 
+                }
+
                 // 🔥 Nếu click lại chính unit đang chọn → mở menu
                 if (selectedUnit == unit && currentState == GameState.Moving)
                 {
@@ -218,16 +240,15 @@ public class UnitController : MonoBehaviour
 
             if (groundTilemap.HasTile(cell))
             {
-                // ❌ không highlight ô có unit (trừ chính nó)
-                if (current != unit.gridPosition && HasUnitAt(current))
-                    continue;
-
                 if (current != unit.gridPosition)
                 {
-                    
-                    highlightMove.SetTile(cell, highlightTile);
-                    validMoveTiles.Add(current);
-                }             
+                    // ❌ KHÔNG cho đứng lên ô có unit
+                    if (!HasUnitAt(current))
+                    {
+                        highlightMove.SetTile(cell, highlightTile);
+                        validMoveTiles.Add(current);
+                    }
+                }
             }
 
             // 4 hướng
@@ -245,10 +266,18 @@ public class UnitController : MonoBehaviour
                 if (visited.Contains(next))
                     continue;
 
-                // ❌ chặn nếu có unit (không cho đi xuyên)
-                if (HasUnitAt(next))
-                    continue;
+                Unit unitAtNext = GetUnitAt(next);
 
+                if (unitAtNext != null)
+                {
+                    // ❌ nếu là enemy → chặn
+                    if (unitAtNext.isEnemy != unit.isEnemy)
+                        continue;
+
+                    // ✔ nếu là đồng minh → cho đi xuyên (không continue)
+                }
+
+                // 🔥 vẫn lan BFS
                 visited.Add(next);
                 cameFrom[next] = current;
                 queue.Enqueue((next, dist + 1));
@@ -349,6 +378,24 @@ public class UnitController : MonoBehaviour
 
     public void OnWaitSelected()
     {
+        // 🔥 check tile event trước
+        ItemAdd[] eventItem = FindObjectsByType<ItemAdd>(FindObjectsSortMode.None);
+        WeaponAdd[] eventWeapon = FindObjectsByType<WeaponAdd>(FindObjectsSortMode.None);
+
+        foreach (var e in eventItem)
+        {
+            if (e.position == selectedUnit.gridPosition)
+            {
+                e.Trigger(selectedUnit);
+            }
+        }
+        foreach (var e in eventWeapon)
+        {
+            if (e.position == selectedUnit.gridPosition)
+            {
+                e.Trigger(selectedUnit);
+            }
+        }
         selectedUnit.hasActed = true;
         selectedUnit.UpdateVisual();
         CancelSelection();
@@ -446,16 +493,30 @@ public class UnitController : MonoBehaviour
         selectedUnit.lastUsedWeapon = weapon;
         selectedUnit.Attack(target, () =>
         {
+            // 🔥 TRỪ ĐỘ BỀN
+            weapon.currentDurability--;
+
+            // 🔥 nếu vỡ
+            if (weapon.currentDurability <= 0)
+            {
+                selectedUnit.weapons.Remove(weapon);
+
+                PickupPopupManager.Instance.ShowPopup(
+                    weapon.weaponName + " broke!",
+                    selectedUnit.transform.position
+                );
+            }
+
             selectedUnit.hasActed = true;
             selectedUnit.UpdateVisual();
 
             CancelSelection();
             CloseAllMenus();
-            
+
             isBusy = false;
             TurnManager.Instance.CheckEndPlayerTurn();
         });
-        
+
     }
     void CloseAllMenus()
     {

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1aa92664bb2a2e4098a79ed4ef8627a, type: 3}
   m_Name: Recuit
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
-  prefab: {fileID: 6030046502504930667, guid: fb6c69187f2fa42408a81457fb1e6867, type: 3}
   unitName: Recruit
   maxHP: 10
   currentHP: 0
@@ -26,9 +25,22 @@ MonoBehaviour:
     type: 0
     id: 1
     value: 5
+  - itemName: Bandage
+    type: 0
+    id: 2
+    value: 3
   startWeapons:
   - weaponName: Knife
     id: 1
     minRange: 1
     maxRange: 1
     damage: 10
+    maxDurability: 10
+    currentDurability: 10
+  - weaponName: Shield
+    id: 6
+    minRange: 1
+    maxRange: 1
+    damage: 5
+    maxDurability: 10
+    currentDurability: 10

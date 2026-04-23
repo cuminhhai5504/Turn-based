@@ -45,7 +45,12 @@ public class Unit : MonoBehaviour
 
         // COPY item (quan trọng: không dùng reference trực tiếp)
         inventory = new List<Item>(data.startItems);
-        weapons = new List<Weapon>(data.startWeapons);
+        weapons = new List<Weapon>();
+
+        foreach (var w in data.startWeapons)
+        {
+            weapons.Add(w.Clone());
+        }
     }
     public bool IsAlive()
     {
@@ -75,7 +80,22 @@ public class Unit : MonoBehaviour
         attackRange = data.attackRange;
 
         inventory = new List<Item>(data.startItems);
-        weapons = new List<Weapon>(data.startWeapons);
+        weapons = new List<Weapon>();
+
+        foreach (var w in data.startWeapons)
+        {
+            Weapon clone = new Weapon();
+
+            clone.weaponName = w.weaponName;
+            clone.damage = w.damage;
+            clone.minRange = w.minRange;
+            clone.maxRange = w.maxRange;
+
+            clone.maxDurability = w.maxDurability;
+            clone.currentDurability = w.maxDurability; // 🔥 reset sạch
+
+            weapons.Add(clone);
+        }
         expUI = GetComponentInChildren<UnitEXPUI>();
     }
 
@@ -196,6 +216,20 @@ public class Unit : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
 
             TakeDamage(counterWeapon.damage, target);
+
+            // 🔥 TRỪ ĐỘ BỀN KHI PHẢN ĐÒN
+            counterWeapon.currentDurability--;
+
+            // 🔥 nếu vỡ
+            if (counterWeapon.currentDurability <= 0)
+            {
+                target.weapons.Remove(counterWeapon);
+
+                PickupPopupManager.Instance.ShowPopup(
+                    counterWeapon.weaponName + " broke!",
+                    target.transform.position
+                );
+            }
         }
         onComplete?.Invoke();
     }
@@ -260,9 +294,8 @@ public class Unit : MonoBehaviour
                 expGained -= expNeeded;
 
                 // 🔥 LEVEL UP
-                LevelUp();
-
                 currentEXP = 0;
+                LevelUp();
 
                 yield return new WaitForSeconds(0.2f);
             }
@@ -277,6 +310,7 @@ public class Unit : MonoBehaviour
                 currentEXP += expGained;
                 expGained = 0;
             }
+
         }
         if (expUI != null)
         {
@@ -299,6 +333,7 @@ public class Unit : MonoBehaviour
         maxHP += 2;
         expToNextLevel += 5;
         currentHP = maxHP;
+        
         var newStats = GetStats();
         LevelUpUI ui = FindFirstObjectByType<LevelUpUI>();
         if (ui != null)
@@ -363,6 +398,15 @@ public class Unit : MonoBehaviour
         if (Input.GetMouseButtonDown(1)) // chuột phải
         {
             UnitInfoUI.Instance.Show(this);
+            UnitEXPUI expUI = GetComponentInChildren<UnitEXPUI>(); // 🔥 lấy lại
+            
+            if (expUI != null)
+            {
+                expUI.ShowInstant(currentEXP, expToNextLevel);
+
+                // 🔥 tự ẩn sau 2s
+                StartCoroutine(expUI.HideAfter());
+            }
         }
     }
     void PlayHitFlash()
