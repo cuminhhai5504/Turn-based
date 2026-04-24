@@ -145,21 +145,22 @@ public class UnitController : MonoBehaviour
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorld.z = 0;
 
-        RaycastHit2D hit = Physics2D.Raycast(mouseWorld, Vector2.zero);
-        
-        if(currentState == GameState.Attacking)
+        Vector3Int cell = groundTilemap.WorldToCell(mouseWorld);
+        Vector2Int gridPos = (Vector2Int)cell;
+
+        // 🔥 lấy unit tại tile
+        Unit unit = GetUnitAt(gridPos);
+
+        if (currentState == GameState.Attacking)
         {
             if (EventSystem.current.IsPointerOverGameObject())
                 return;
-            if (hit.collider != null)
-            {
-                Unit target = hit.collider.GetComponent<Unit>();
+            Unit target = GetUnitAt(gridPos);
 
-                if (target != null && target.isEnemy != selectedUnit.isEnemy)
-                {
-                    OpenWeaponMenu(target);
-                    return;
-                }
+            if (target != null && target.isEnemy != selectedUnit.isEnemy)
+            {
+                OpenWeaponMenu(target);
+                return;
             }
             UndoMove();          // 🔥 FIX
             CloseAllMenus();
@@ -172,28 +173,21 @@ public class UnitController : MonoBehaviour
             CloseAllMenus();
             return;
         }
-        if (hit.collider != null)
+        if (unit != null && !unit.isEnemy)
         {
-            Unit unit = hit.collider.GetComponent<Unit>();
-
-            if (unit != null && !unit.isEnemy)
+            if (selectedUnit != null && selectedUnit != unit)
             {
-                // 🔥 nếu đang chọn unit khác → reset rồi chọn mới
-                if (selectedUnit != null && selectedUnit != unit)
-                {
-                    CancelSelection(); 
-                }
+                CancelSelection();
+            }
 
-                // 🔥 Nếu click lại chính unit đang chọn → mở menu
-                if (selectedUnit == unit && currentState == GameState.Moving)
-                {
-                    OpenActionMenu(unit);
-                    return;
-                }
-
-                SelectUnit(unit);
+            if (selectedUnit == unit && currentState == GameState.Moving)
+            {
+                OpenActionMenu(unit);
                 return;
             }
+
+            SelectUnit(unit);
+            return;
         }
 
         // 🔵 Di chuyển
@@ -440,6 +434,7 @@ public class UnitController : MonoBehaviour
 
         // 🔥 hiện lại vùng di chuyển
         ShowMoveRange(selectedUnit);
+
     }
     public void OnItemSelected()
     {

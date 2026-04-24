@@ -420,10 +420,10 @@ public class Unit : MonoBehaviour
             .SetLoops(3, LoopType.Yoyo);
 
         // 🔥 giật nhẹ (knock)
-        transform.DOShakePosition(0.2f, 0.2f, 10, 90, false, true);
+        visualTransform.DOShakePosition(0.2f, 0.2f, 10, 90, false, true);
 
         // 🔥 scale punch (cảm giác impact)
-        transform.DOPunchScale(Vector3.one * 0.2f, 0.2f, 10, 1);
+        visualTransform.DOPunchScale(Vector3.one * 0.2f, 0.2f, 10, 1);
 
         // 🔥 reset màu
         DOVirtual.DelayedCall(0.2f, () =>

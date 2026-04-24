@@ -6,7 +6,7 @@ public class UnitData : ScriptableObject
 {
     
     public string unitName;
-
+    public string id;
     public int maxHP;
     public int currentHP;
     public int moveRange;
