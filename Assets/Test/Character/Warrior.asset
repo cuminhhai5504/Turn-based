@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Warrior
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
   unitName: Warrior
+  id: 2
   maxHP: 15
   currentHP: 0
   moveRange: 3

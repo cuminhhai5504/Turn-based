@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 public enum GameState
 {
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("UnlockedLevel", currentLevel + 1);
             PlayerPrefs.Save();
         }
+        
         Debug.Log("Victory!");
         UIManager.Instance.ShowResult("Victory!");
     }

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Lancer
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
   unitName: Lancer
+  id: 3
   maxHP: 15
   currentHP: 0
   moveRange: 3

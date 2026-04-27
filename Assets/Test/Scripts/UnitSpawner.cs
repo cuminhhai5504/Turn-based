@@ -1,3 +1,4 @@
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -21,7 +22,9 @@ public class UnitSpawner : MonoBehaviour
         GameObject unitObj = Instantiate(data.prefab, worldPos, Quaternion.identity);
 
         Unit unit = unitObj.GetComponent<Unit>();
+        unit.Init(unit.data);
         unit.SetPosition(data.gridPosition);
         unit.isEnemy = data.isEnemy;
     }
+    
 }

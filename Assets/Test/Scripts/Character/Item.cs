@@ -31,4 +31,14 @@ public class Item
                 break;
         }
     }
+    public Item Clone()
+    {
+        return new Item
+        {
+            itemName = this.itemName,
+            id = this.id,
+            type = this.type,
+            value = this.value
+        };
+    }
 }

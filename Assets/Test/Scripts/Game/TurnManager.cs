@@ -10,6 +10,7 @@ public class TurnManager : MonoBehaviour
     public int turnCount = 1;
     
     public bool isUIBlocking = false;
+    public bool isEventRunning = false;
     public enum TurnState
     {
         PlayerTurn,

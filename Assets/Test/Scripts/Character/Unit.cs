@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using Unity.VisualScripting;
 using DG.Tweening;
+using static UnityEngine.UI.CanvasScaler;
 
 public class Unit : MonoBehaviour
 {
@@ -12,14 +13,14 @@ public class Unit : MonoBehaviour
     public bool isEnemy;
     public string unitName;
     public int moveRange;
-
+    
     public int maxHP;
     public int currentHP;
     public int attackDamage;
     public int attackRange;
     public int level;
     public int currentEXP;
-    public int expToNextLevel = 10;
+    public int expToNextLevel;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -31,22 +32,30 @@ public class Unit : MonoBehaviour
     Transform visualTransform;
     UnitEXPUI expUI;
 
+    bool isGainingEXP = false;
     public void Init(UnitData data)
     {
-        unitName = data.unitName;
+        this.data = data;
 
+        unitName = data.unitName;
         maxHP = data.maxHP;
-        currentHP = data.maxHP;
+        currentHP = maxHP;
         moveRange = data.moveRange;
         attackRange = data.attackRange;
+
         level = data.level;
         currentEXP = data.currentEXP;
         expToNextLevel = data.expToNextLevel;
 
-        // COPY item (quan trọng: không dùng reference trực tiếp)
-        inventory = new List<Item>(data.startItems);
-        weapons = new List<Weapon>();
+        // 🔥 CLONE ITEM
+        inventory = new List<Item>();
+        foreach (var i in data.startItems)
+        {
+            inventory.Add(i.Clone());
+        }
 
+        // 🔥 CLONE WEAPON
+        weapons = new List<Weapon>();
         foreach (var w in data.startWeapons)
         {
             weapons.Add(w.Clone());
@@ -74,28 +83,7 @@ public class Unit : MonoBehaviour
 
     void Start()
     {
-        maxHP = data.maxHP;
-        currentHP = maxHP;
-        moveRange = data.moveRange;
-        attackRange = data.attackRange;
-
-        inventory = new List<Item>(data.startItems);
-        weapons = new List<Weapon>();
-
-        foreach (var w in data.startWeapons)
-        {
-            Weapon clone = new Weapon();
-
-            clone.weaponName = w.weaponName;
-            clone.damage = w.damage;
-            clone.minRange = w.minRange;
-            clone.maxRange = w.maxRange;
-
-            clone.maxDurability = w.maxDurability;
-            clone.currentDurability = w.maxDurability; // 🔥 reset sạch
-
-            weapons.Add(clone);
-        }
+       
         expUI = GetComponentInChildren<UnitEXPUI>();
     }
 
@@ -272,6 +260,8 @@ public class Unit : MonoBehaviour
     public void GainEXP(int amount)
     {
         if (isEnemy) return;
+        TurnManager.Instance.isEventRunning = true;
+        isGainingEXP = true;
         StartCoroutine(GainEXPCoroutine(amount));
     }
     IEnumerator GainEXPCoroutine(int amount)
@@ -316,6 +306,20 @@ public class Unit : MonoBehaviour
         {
             StartCoroutine(expUI.HideAfter());
         }
+        isGainingEXP = false;
+        // 🔥 CHỈ unlock khi KHÔNG có promotion
+        if (level != 2 || data.unitName != "Recruit")
+        {
+            TurnManager.Instance.isEventRunning = false;
+        }
+    }
+    IEnumerator WaitAndShowPromotion()
+    {
+        // 🔥 đợi EXP chạy xong
+        while (isGainingEXP)
+            yield return null;
+
+        PromotionUI.Instance.Show(this);
     }
     void LevelUp()
     {
@@ -326,7 +330,7 @@ public class Unit : MonoBehaviour
         {
             
             TurnManager.Instance.isUIBlocking = true;
-            PromotionUI.Instance.Show(this);
+            StartCoroutine(WaitAndShowPromotion());
 
             return;
         }
@@ -439,6 +443,7 @@ public class Unit : MonoBehaviour
         {
             killer.GainEXP(15); 
         }
+
         StartCoroutine(DieCoroutine());
     }
     IEnumerator DieCoroutine()
@@ -454,6 +459,95 @@ public class Unit : MonoBehaviour
     public void ResetTurn()
     {
         hasActed = false;
+        UpdateVisual();
+    }
+    public UnitSaveData GetSaveData()
+    {
+        UnitSaveData data = new UnitSaveData();
+
+        data.unitID = this.data.id;
+        data.x = gridPosition.x;
+        data.y = gridPosition.y;
+
+        data.hp = currentHP;
+        data.maxHp = maxHP;
+        data.level = level;
+        data.exp = currentEXP;
+
+        data.hasActed = hasActed;
+        data.isEnemy = isEnemy;
+
+        // SAVE WEAPONS
+        data.weapons = new List<WeaponSaveData>();
+        foreach (var w in weapons)
+        {
+            data.weapons.Add(new WeaponSaveData
+            {
+                id = w.id,
+                currentDurability = w.currentDurability
+            });
+        }
+
+        // SAVE ITEMS
+        data.items = new List<ItemSaveData>();
+        foreach (var i in inventory)
+        {
+            data.items.Add(new ItemSaveData
+            {
+                id = i.id,
+                value = i.value
+            });
+        }
+
+        return data;
+    }
+    public void LoadFromData(UnitSaveData data)
+    {
+        currentHP = data.hp;
+        maxHP = data.maxHp;
+        level = data.level;
+        currentEXP = data.exp;
+
+        hasActed = data.hasActed;
+        isEnemy = data.isEnemy;
+
+        gridPosition = new Vector2Int(data.x, data.y);
+
+        // 🔥 LẤY TILEMAP (giống chỗ Promote)
+        Tilemap tilemap = FindFirstObjectByType<Tilemap>();
+
+        if (tilemap != null)
+        {
+            transform.position = tilemap.GetCellCenterWorld((Vector3Int)gridPosition);
+        }
+        else
+        {
+            Debug.LogError("Không tìm thấy Tilemap khi Load!");
+        }
+
+        // =========================
+        // 🔥 LOAD WEAPONS
+        // =========================
+        weapons = new List<Weapon>();
+        foreach (var wData in data.weapons)
+        {
+            Weapon w = WeaponDatabase.Instance.Create(wData.id);
+            w.currentDurability = wData.currentDurability;
+            weapons.Add(w);
+        }
+
+        // =========================
+        // 🔥 LOAD ITEMS
+        // =========================
+        inventory = new List<Item>();
+        foreach (var iData in data.items)
+        {
+            Item item = ItemDatabase.Instance.Create(iData.id);
+            item.value = iData.value;
+            inventory.Add(item);
+        }
+
+        // 🔥 Cập nhật visual (mờ nếu đã act)
         UpdateVisual();
     }
 }

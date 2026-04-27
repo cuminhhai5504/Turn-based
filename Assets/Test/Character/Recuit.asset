@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Recuit
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
   unitName: Recruit
+  id: 1
   maxHP: 10
   currentHP: 0
   moveRange: 3

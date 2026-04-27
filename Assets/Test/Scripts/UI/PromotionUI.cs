@@ -51,6 +51,7 @@ public class PromotionUI : MonoBehaviour
         panel.SetActive(false);
 
         TurnManager.Instance.isUIBlocking = false;
+        TurnManager.Instance.isEventRunning = false;
         TurnManager.Instance.CheckEndPlayerTurn();
         GameManager.Instance.CheckGameResult();
     }

@@ -123,6 +123,11 @@ public class EnemyAIController : MonoBehaviour
 
 
         }
+        // 🔥 CHỜ tất cả event (EXP + Promotion) hoàn toàn xong
+        yield return new WaitWhile(() => TurnManager.Instance.isEventRunning);
+
+        // 🔥 an toàn thêm 1 frame
+        yield return null;
 
         // 🔥 Kết thúc lượt enemy
         TurnManager.Instance.EndEnemyTurn();
@@ -137,7 +142,7 @@ public class EnemyAIController : MonoBehaviour
 
         foreach (var player in players)
         {
-            if (player == null) continue;
+            if (player == null || !player.IsAlive()) continue;
 
             int dist = Distance(enemy.gridPosition, player.gridPosition);
 
