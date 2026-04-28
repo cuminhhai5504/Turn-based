@@ -2,17 +2,27 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadManager : MonoBehaviour
 {
     public static SaveLoadManager Instance;
 
-    private string savePath;
+    
+    public BattleSaveData cachedData;
 
-    private void Awake()
+    void Awake()
     {
-        Instance = this;
-        savePath = Application.persistentDataPath + "/save.json";
+        // 🔥 FIX: Singleton + sống xuyên scene
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SaveGame()
@@ -25,7 +35,7 @@ public class SaveLoadManager : MonoBehaviour
             data.units.Add(unit.GetSaveData());
         }
 
-        // 🔥 nếu có TurnManager thì thêm
+        data.sceneName = SceneManager.GetActiveScene().name;
         data.turnNumber = TurnManager.Instance.turnCount;
         data.currentPhase = TurnManager.Instance.currentTurn.ToString();
 
@@ -49,9 +59,11 @@ public class SaveLoadManager : MonoBehaviour
 
         StartCoroutine(LoadRoutine(data));
     }
-    IEnumerator LoadRoutine(BattleSaveData data)
+    public IEnumerator LoadRoutine(BattleSaveData data)
     {
-        // 🔥 XÓA UNIT CŨ
+        Debug.Log("LOAD START");
+
+        // 🔥 XÓA unit cũ
         foreach (var u in FindObjectsByType<Unit>(FindObjectsSortMode.None))
         {
             Destroy(u.gameObject);
@@ -59,15 +71,22 @@ public class SaveLoadManager : MonoBehaviour
 
         yield return null;
 
-        // 🔥 SPAWN LẠI
+        // 🔥 SPAWN lại unit
         foreach (var uData in data.units)
         {
             GameObject prefab = UnitDatabase.Instance.GetPrefab(uData.unitID);
+
+            if (prefab == null)
+            {
+                Debug.LogError("Missing prefab: " + uData.unitID);
+                continue;
+            }
 
             GameObject obj = Instantiate(prefab);
             Unit unit = obj.GetComponent<Unit>();
 
             unit.LoadFromData(uData);
+
             TurnManager.Instance.AddUnit(unit);
         }
 
@@ -79,6 +98,26 @@ public class SaveLoadManager : MonoBehaviour
             TurnManager.Instance.SetState(state);
         }
 
-        Debug.Log("Load xong!");
+        // 🔥 UNLOCK game
+        TurnManager.Instance.isEventRunning = false;
+        TurnManager.Instance.isUIBlocking = false;
+
+        Debug.Log("LOAD DONE");
+    }
+    public void ContinueGame()
+    {
+        if (!PlayerPrefs.HasKey("SAVE_DATA"))
+        {
+            Debug.Log("No save!");
+            return;
+        }
+
+        string json = PlayerPrefs.GetString("SAVE_DATA");
+        cachedData = JsonUtility.FromJson<BattleSaveData>(json);
+
+        // 🔥 đưa scene cần load cho LoadingScene
+        SceneLoader.sceneToLoad = cachedData.sceneName;
+
+        SceneManager.LoadScene("LoadingScene");
     }
 }

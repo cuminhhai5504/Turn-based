@@ -18,9 +18,9 @@ MonoBehaviour:
   currentHP: 0
   moveRange: 3
   attackRange: 1
-  level: 0
+  level: 1
   currentEXP: 0
-  expToNextLevel: 0
+  expToNextLevel: 10
   startItems:
   - itemName: Healing Potion
     type: 0

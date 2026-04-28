@@ -13,7 +13,7 @@ public class MainMenuUI : MonoBehaviour
     }
     public void OnPlay()
     {
-        
+        SaveLoadManager.Instance.cachedData = null;
         // 🔥 Fade ra đen trước
         fadePanel.DOFade(1, 0.5f).OnComplete(() =>
         {
@@ -22,7 +22,10 @@ public class MainMenuUI : MonoBehaviour
             SceneManager.LoadScene("LoadingScene");
         });
     }
-
+    public void OnContinue()
+    {
+        SaveLoadManager.Instance.ContinueGame();
+    }
     public void OnQuit()
     {
         Application.Quit();

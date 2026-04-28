@@ -12,6 +12,7 @@ public class UnitSaveData
 
     public int level;
     public int exp;
+    public int expToNext;
 
     public bool hasActed;
     public bool isEnemy;

@@ -386,7 +386,7 @@ public class Unit : MonoBehaviour
         GameObject newUnitObj = Instantiate(newPrefab, worldPos, Quaternion.identity);
 
         Unit newUnit = newUnitObj.GetComponent<Unit>();
-
+        newUnit.Init(newUnit.data); // 🔥 bắt buộc
         // Gán lại thông tin cơ bản
         newUnit.SetPosition(pos);
         newUnit.isEnemy = enemy;
@@ -473,6 +473,7 @@ public class Unit : MonoBehaviour
         data.maxHp = maxHP;
         data.level = level;
         data.exp = currentEXP;
+        data.expToNext = expToNextLevel;
 
         data.hasActed = hasActed;
         data.isEnemy = isEnemy;
@@ -503,10 +504,12 @@ public class Unit : MonoBehaviour
     }
     public void LoadFromData(UnitSaveData data)
     {
+
         currentHP = data.hp;
         maxHP = data.maxHp;
         level = data.level;
         currentEXP = data.exp;
+        expToNextLevel = data.expToNext;
 
         hasActed = data.hasActed;
         isEnemy = data.isEnemy;
