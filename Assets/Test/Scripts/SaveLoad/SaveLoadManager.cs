@@ -46,23 +46,11 @@ public class SaveLoadManager : MonoBehaviour
 
         Debug.Log("Saved with PlayerPrefs!");
     }
-    public void LoadGame()
-    {
-        if (!PlayerPrefs.HasKey("SAVE_DATA"))
-        {
-            Debug.LogError("Không có save!");
-            return;
-        }
-
-        string json = PlayerPrefs.GetString("SAVE_DATA");
-        BattleSaveData data = JsonUtility.FromJson<BattleSaveData>(json);
-
-        StartCoroutine(LoadRoutine(data));
-    }
+    
     public IEnumerator LoadRoutine(BattleSaveData data)
     {
         Debug.Log("LOAD START");
-
+        TurnManager.Instance.isLoading = true; // 🔥 bật loading
         // 🔥 XÓA unit cũ
         foreach (var u in FindObjectsByType<Unit>(FindObjectsSortMode.None))
         {
@@ -119,5 +107,30 @@ public class SaveLoadManager : MonoBehaviour
         SceneLoader.sceneToLoad = cachedData.sceneName;
 
         SceneManager.LoadScene("LoadingScene");
+    }
+    void OnApplicationQuit()
+    {
+        TryAutoSave();
+    }
+
+    void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            TryAutoSave();
+        }
+    }
+    void TryAutoSave()
+    {
+        if (TurnManager.Instance == null) return;
+
+        if (TurnManager.Instance.isLoading) return;
+
+        if (TurnManager.Instance.playerUnits.Count == 0) return;
+
+        if (TurnManager.Instance.isEventRunning) return;
+
+        Debug.Log("AUTO SAVE...");
+        SaveGame();
     }
 }

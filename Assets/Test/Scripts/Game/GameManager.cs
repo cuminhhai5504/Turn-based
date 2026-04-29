@@ -67,7 +67,25 @@ public class GameManager : MonoBehaviour
             LoseGame();
         }
     }
+    public void SaveProgressAfterBattle()
+    {
+        PlayerProgressData data = new PlayerProgressData();
+        data.playerUnits = new List<UnitSaveData>();
 
+        foreach (var unit in TurnManager.Instance.playerUnits)
+        {
+            if (unit != null && unit.IsAlive())
+            {
+                data.playerUnits.Add(unit.GetSaveData());
+            }
+        }
+
+        string json = JsonUtility.ToJson(data);
+        PlayerPrefs.SetString("PROGRESS_DATA", json);
+        PlayerPrefs.Save();
+
+        Debug.Log("Progress Saved!");
+    }
     void WinGame()
     {
         TurnManager.Instance.isUIBlocking = true;
@@ -84,7 +102,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("UnlockedLevel", currentLevel + 1);
             PlayerPrefs.Save();
         }
-        
+        SaveProgressAfterBattle();
         Debug.Log("Victory!");
         UIManager.Instance.ShowResult("Victory!");
     }

@@ -3,48 +3,56 @@
   "WorkspaceRootPath": "D:\\game\\Turn-based gacha\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\game\\mainmenuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\game\\mainmenuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|d:\\game\\turn-based gacha\\assets\\test\\scripts\\ui\\unitinfoui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\ui\\unitinfoui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\gameloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\gameloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|d:\\game\\turn-based gacha\\assets\\test\\scripts\\spawn\\progressunitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\spawn\\progressunitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|d:\\game\\turn-based gacha\\assets\\test\\scripts\\saveload\\saveloadmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\saveloadmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|d:\\game\\turn-based gacha\\assets\\test\\scripts\\saveload\\savebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\savebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\game\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\game\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\battlesavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\battlesavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|d:\\game\\turn-based gacha\\assets\\test\\scripts\\spawn\\deploymentpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\spawn\\deploymentpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\character\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\character\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\character\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\character\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\playerprogressdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\playerprogressdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\unitsavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\unitsavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\saveloadmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\saveloadmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\game\\loadingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\game\\loadingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|d:\\game\\turn-based gacha\\assets\\test\\scripts\\saveload\\gameloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\gameloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\game\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\game\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\game\\turnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\game\\turnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\spawn\\unitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\spawn\\unitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\unitdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\unitdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\battlesavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\battlesavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\unitsavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\unitsavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\itemdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,24 +63,8 @@
       "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\character\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\itemsavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\itemsavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\weaponsavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\weaponsavedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\saveload\\weapondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\saveload\\weapondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\game\\turnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\game\\turnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|D:\\game\\Turn-based gacha\\assets\\test\\scripts\\game\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{724ACD45-0284-016B-EC16-4746CF67A1CA}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\scripts\\game\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,70 +74,109 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SaveButton.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\SaveButton.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\SaveButton.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\SaveButton.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\SaveLoad\\SaveButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "DocumentIndex": 0,
+              "Title": "UnitInfoUI.cs",
+              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\UI\\UnitInfoUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\UI\\UnitInfoUI.cs",
+              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\UI\\UnitInfoUI.cs",
+              "RelativeToolTip": "Assets\\Test\\Scripts\\UI\\UnitInfoUI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T10:26:28.011Z",
+              "WhenOpened": "2026-04-29T09:48:02.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "GameLoader.cs",
               "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\GameLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\GameLoader.cs",
               "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\GameLoader.cs",
               "RelativeToolTip": "Assets\\Test\\Scripts\\SaveLoad\\GameLoader.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T10:14:50.036Z",
+              "WhenOpened": "2026-04-29T09:16:06.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainMenuUI.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\MainMenuUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Game\\MainMenuUI.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\MainMenuUI.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\Game\\MainMenuUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAAzAAAA",
+              "DocumentIndex": 2,
+              "Title": "DeploymentPoint.cs",
+              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Spawn\\DeploymentPoint.cs",
+              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Spawn\\DeploymentPoint.cs",
+              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Spawn\\DeploymentPoint.cs",
+              "RelativeToolTip": "Assets\\Test\\Scripts\\Spawn\\DeploymentPoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T07:35:16.142Z",
+              "WhenOpened": "2026-04-29T08:59:05.184Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Character\\Unit.cs",
+              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Character\\Unit.cs",
+              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Character\\Unit.cs",
+              "RelativeToolTip": "Assets\\Test\\Scripts\\Character\\Unit.cs",
+              "ViewState": "AQIAAO4BAAAAAAAAAAAtwAcCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T08:01:51.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProgressUnitSpawner.cs",
+              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Spawn\\ProgressUnitSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Spawn\\ProgressUnitSpawner.cs",
+              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Spawn\\ProgressUnitSpawner.cs",
+              "RelativeToolTip": "Assets\\Test\\Scripts\\Spawn\\ProgressUnitSpawner.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAgwC0AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T08:56:42.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Game\\GameManager.cs",
+              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Test\\Scripts\\Game\\GameManager.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAuwGgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T08:52:55.092Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SceneLoader.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\SceneLoader.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Game\\SceneLoader.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\SceneLoader.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\Game\\SceneLoader.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAAAAAA",
+              "Title": "PlayerProgressData.cs",
+              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\PlayerProgressData.cs",
+              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\PlayerProgressData.cs",
+              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\PlayerProgressData.cs",
+              "RelativeToolTip": "Assets\\Test\\Scripts\\SaveLoad\\PlayerProgressData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T07:33:50.598Z"
+              "WhenOpened": "2026-04-29T08:42:50.259Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "LoadingScene.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\LoadingScene.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Game\\LoadingScene.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\LoadingScene.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\Game\\LoadingScene.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAQwC4AAAABAAAA",
+              "Title": "UnitSpawner.cs",
+              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Spawn\\UnitSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Spawn\\UnitSpawner.cs",
+              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Spawn\\UnitSpawner.cs",
+              "RelativeToolTip": "Assets\\Test\\Scripts\\Spawn\\UnitSpawner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T07:33:10.257Z"
+              "WhenOpened": "2026-04-29T07:18:40.831Z"
             },
             {
               "$type": "Document",
@@ -161,20 +192,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SaveLoadManager.cs",
               "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\SaveLoadManager.cs",
               "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\SaveLoadManager.cs",
               "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\SaveLoadManager.cs",
               "RelativeToolTip": "Assets\\Test\\Scripts\\SaveLoad\\SaveLoadManager.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAwwAoAAAAEAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAqwH8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-27T08:23:47.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ItemDatabase.cs",
               "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\ItemDatabase.cs",
               "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\ItemDatabase.cs",
@@ -199,30 +230,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "WeaponSaveData.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\WeaponSaveData.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\WeaponSaveData.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\WeaponSaveData.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\SaveLoad\\WeaponSaveData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T08:02:00.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ItemSaveData.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\ItemSaveData.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\ItemSaveData.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\ItemSaveData.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\SaveLoad\\ItemSaveData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T08:01:50.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Item.cs",
               "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Character\\Item.cs",
               "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Character\\Item.cs",
@@ -234,31 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Unit.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Character\\Unit.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Character\\Unit.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Character\\Unit.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\Character\\Unit.cs",
-              "ViewState": "AQIAAPoBAAAAAAAAAAAhwAACAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T07:42:38.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Weapon.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Character\\Weapon.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Character\\Weapon.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Character\\Weapon.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\Character\\Weapon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T09:43:50.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "BattleSaveData.cs",
               "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\BattleSaveData.cs",
               "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\BattleSaveData.cs",
@@ -270,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "UnitSaveData.cs",
               "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\SaveLoad\\UnitSaveData.cs",
               "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\SaveLoad\\UnitSaveData.cs",
@@ -282,25 +265,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Game\\GameManager.cs",
-              "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Test\\Scripts\\Game\\GameManager.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAuwFYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T13:41:40.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 8,
               "Title": "TurnManager.cs",
               "DocumentMoniker": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\TurnManager.cs",
               "RelativeDocumentMoniker": "Assets\\Test\\Scripts\\Game\\TurnManager.cs",
               "ToolTip": "D:\\game\\Turn-based gacha\\Assets\\Test\\Scripts\\Game\\TurnManager.cs",
               "RelativeToolTip": "Assets\\Test\\Scripts\\Game\\TurnManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAnAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGkAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-24T08:42:45.855Z"
             }

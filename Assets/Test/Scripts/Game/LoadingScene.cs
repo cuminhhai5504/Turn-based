@@ -16,7 +16,10 @@ public class LoadingScene : MonoBehaviour
         // Fade in
         fadePanel.DOFade(0, 1f);
     }
-
+    void OnEnable()
+    {
+        DOTween.KillAll(); // 🔥 reset toàn bộ tween cũ
+    }
     IEnumerator LoadGame()
     {
         

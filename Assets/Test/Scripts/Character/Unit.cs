@@ -315,6 +315,7 @@ public class Unit : MonoBehaviour
     }
     IEnumerator WaitAndShowPromotion()
     {
+
         // 🔥 đợi EXP chạy xong
         while (isGainingEXP)
             yield return null;
@@ -328,7 +329,7 @@ public class Unit : MonoBehaviour
         level++;
         if (level == 2 && data.unitName == "Recruit")
         {
-            
+            TurnManager.Instance.isEventRunning = true;
             TurnManager.Instance.isUIBlocking = true;
             StartCoroutine(WaitAndShowPromotion());
 
@@ -502,7 +503,7 @@ public class Unit : MonoBehaviour
 
         return data;
     }
-    public void LoadFromData(UnitSaveData data)
+    public void LoadFromData(UnitSaveData data, bool keepPosition = true)
     {
 
         currentHP = data.hp;
@@ -513,8 +514,11 @@ public class Unit : MonoBehaviour
 
         hasActed = data.hasActed;
         isEnemy = data.isEnemy;
+        if (keepPosition) 
+        {
+            gridPosition = new Vector2Int(data.x, data.y);
 
-        gridPosition = new Vector2Int(data.x, data.y);
+        }
 
         // 🔥 LẤY TILEMAP (giống chỗ Promote)
         Tilemap tilemap = FindFirstObjectByType<Tilemap>();

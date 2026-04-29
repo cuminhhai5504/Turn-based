@@ -13,6 +13,7 @@ public class MainMenuUI : MonoBehaviour
     }
     public void OnPlay()
     {
+        PlayerPrefs.DeleteAll();
         SaveLoadManager.Instance.cachedData = null;
         // 🔥 Fade ra đen trước
         fadePanel.DOFade(1, 0.5f).OnComplete(() =>

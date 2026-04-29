@@ -9,6 +9,13 @@ public class UnitSpawner : MonoBehaviour
 
     void Start()
     {
+        // 🔥 Nếu đang Continue → KHÔNG spawn
+        if (SaveLoadManager.Instance != null &&
+            SaveLoadManager.Instance.cachedData != null)
+        {
+            Debug.Log("Skip spawn (Continue)");
+            return;
+        }
         foreach (var data in spawnConfig.units)
         {
             SpawnUnit(data);
@@ -25,6 +32,7 @@ public class UnitSpawner : MonoBehaviour
         unit.Init(unit.data);
         unit.SetPosition(data.gridPosition);
         unit.isEnemy = data.isEnemy;
+        
     }
     
 }

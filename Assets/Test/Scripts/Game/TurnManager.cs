@@ -11,6 +11,7 @@ public class TurnManager : MonoBehaviour
     
     public bool isUIBlocking = false;
     public bool isEventRunning = false;
+    public bool isLoading = false;
     public enum TurnState
     {
         PlayerTurn,
@@ -78,10 +79,13 @@ public class TurnManager : MonoBehaviour
 
         foreach (var unit in playerUnits)
         {
-            if (unit != null)
-                unit.ResetTurn();
+            if(!isLoading)
+            {
+                if (unit != null)
+                    unit.ResetTurn();
+            }
         }
-
+        isLoading = false;
         StartCoroutine(StartTurnDelay());
     }
     IEnumerator StartTurnDelay()
@@ -99,6 +103,7 @@ public class TurnManager : MonoBehaviour
     {
         if (currentTurn != TurnState.PlayerTurn)
             return;
+        if (isEventRunning) return;
         if (GameManager.Instance.IsGameOver()) return;
         foreach (var unit in playerUnits)
         {
@@ -128,8 +133,11 @@ public class TurnManager : MonoBehaviour
         endTurnUI.ShowEndTurn(turnCount);
         foreach (var unit in enemyUnits)
         {
-            if (unit != null)
-                unit.ResetTurn();
+            if (!isLoading)
+            {
+                if (unit != null)
+                    unit.ResetTurn();
+            }
         }
 
         enemyAI.StartEnemyTurn();
