@@ -16,7 +16,9 @@ public class UnitSaveData
 
     public bool hasActed;
     public bool isEnemy;
+    public bool isUsed;
 
     public List<WeaponSaveData> weapons;
     public List<ItemSaveData> items;
+
 }

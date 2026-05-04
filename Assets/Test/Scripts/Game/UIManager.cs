@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     public GameObject itemActionPanel;
     public GameObject actionMenuPanel;
     public GameObject listPanel;
+    public GameObject guidePanel;
     public Image fadePanel;
     void Awake()
     {
@@ -33,7 +34,10 @@ public class UIManager : MonoBehaviour
 
         resultPanel.SetActive(false);
     }
-
+    void Start()
+    {
+        fadePanel.DOFade(0, 1f);
+    }
     public void ShowResult(string result)
     {
         resultPanel.SetActive(true);
@@ -59,6 +63,7 @@ public class UIManager : MonoBehaviour
         ClosePanel(itemActionPanel);
         ClosePanel(actionMenuPanel);
         ClosePanel(listPanel);
+        ClosePanel(guidePanel);
     }
     void ClosePanel(GameObject panel)
     {
@@ -79,7 +84,8 @@ public class UIManager : MonoBehaviour
             || itemPanel.activeSelf
             || itemActionPanel.activeSelf
             || actionMenuPanel.activeSelf
-            || listPanel.activeSelf;
+            || listPanel.activeSelf
+            || guidePanel.activeSelf;
             
     }
     void Update()

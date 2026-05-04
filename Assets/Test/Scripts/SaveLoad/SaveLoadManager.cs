@@ -38,6 +38,11 @@ public class SaveLoadManager : MonoBehaviour
         data.sceneName = SceneManager.GetActiveScene().name;
         data.turnNumber = TurnManager.Instance.turnCount;
         data.currentPhase = TurnManager.Instance.currentTurn.ToString();
+        // 🔥 FIX: tránh null
+        if (cachedData != null && cachedData.usedEvents != null)
+            data.usedEvents = cachedData.usedEvents;
+        else
+            data.usedEvents = new List<string>();
 
         string json = JsonUtility.ToJson(data);
 
@@ -91,6 +96,7 @@ public class SaveLoadManager : MonoBehaviour
         TurnManager.Instance.isUIBlocking = false;
 
         Debug.Log("LOAD DONE");
+
     }
     public void ContinueGame()
     {
@@ -102,11 +108,53 @@ public class SaveLoadManager : MonoBehaviour
 
         string json = PlayerPrefs.GetString("SAVE_DATA");
         cachedData = JsonUtility.FromJson<BattleSaveData>(json);
-
+        
         // 🔥 đưa scene cần load cho LoadingScene
         SceneLoader.sceneToLoad = cachedData.sceneName;
 
         SceneManager.LoadScene("LoadingScene");
+    }
+    public void MarkEventUsed(string id)
+    {
+        // 🔥 FIX 1: đảm bảo cachedData tồn tại
+        if (cachedData == null)
+        {
+            cachedData = new BattleSaveData();
+            cachedData.usedEvents = new List<string>();
+        }
+
+        // 🔥 FIX 2: đảm bảo list tồn tại
+        if (cachedData.usedEvents == null)
+        {
+            cachedData.usedEvents = new List<string>();
+        }
+
+        if (!cachedData.usedEvents.Contains(id))
+        {
+            cachedData.usedEvents.Add(id);
+        }
+    }
+    public void RestoreMapEvents()
+    {
+        if (cachedData == null) return;
+
+        var used = cachedData.usedEvents;
+
+        foreach (var item in FindObjectsByType<ItemAdd>(FindObjectsSortMode.None))
+        {
+            if (used.Contains(item.id))
+            {
+                item.gameObject.SetActive(false);
+            }
+        }
+
+        foreach (var weapon in FindObjectsByType<WeaponAdd>(FindObjectsSortMode.None))
+        {
+            if (used.Contains(weapon.id))
+            {
+                weapon.gameObject.SetActive(false);
+            }
+        }
     }
     void OnApplicationQuit()
     {
@@ -129,6 +177,9 @@ public class SaveLoadManager : MonoBehaviour
         if (TurnManager.Instance.playerUnits.Count == 0) return;
 
         if (TurnManager.Instance.isEventRunning) return;
+        // 🔥 FIX QUAN TRỌNG
+        if (TurnManager.Instance.currentTurn == TurnManager.TurnState.EnemyTurn)
+            return;
 
         Debug.Log("AUTO SAVE...");
         SaveGame();

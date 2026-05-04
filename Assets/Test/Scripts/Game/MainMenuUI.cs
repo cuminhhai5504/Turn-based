@@ -25,7 +25,11 @@ public class MainMenuUI : MonoBehaviour
     }
     public void OnContinue()
     {
-        SaveLoadManager.Instance.ContinueGame();
+        fadePanel.DOFade(1, 0.5f).OnComplete(() =>
+        {
+            SaveLoadManager.Instance.ContinueGame();
+        });
+        
     }
     public void OnQuit()
     {

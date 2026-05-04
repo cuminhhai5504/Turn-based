@@ -113,6 +113,8 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     damage: 0
+    maxDurability: 0
+    currentDurability: 0
   data: {fileID: 11400000, guid: 716149adb7272dc43916ea53f08ddf2d, type: 2}
 --- !u!1 &1682776817221471714
 GameObject:
@@ -252,7 +254,7 @@ Transform:
   m_GameObject: {fileID: 4743142317156541331}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.05, z: 0}
+  m_LocalPosition: {x: 0, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

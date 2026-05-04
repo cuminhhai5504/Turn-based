@@ -126,7 +126,7 @@ public class Unit : MonoBehaviour
     IEnumerator MovePathCoroutine(List<Vector2Int> path, Tilemap tilemap, System.Action onComplete)
     {
         animator.SetBool("isMoving", true);
-
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx.move);
         float speed = 5f;
 
         foreach (var step in path)
@@ -174,7 +174,7 @@ public class Unit : MonoBehaviour
         FaceTarget(target.transform.position);
         // 🔥 Đánh chính
         animator.SetTrigger("Attack");
-
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx.attack);
         yield return new WaitForSeconds(0.3f);
 
         target.TakeDamage(attackDamage, this);
@@ -444,7 +444,7 @@ public class Unit : MonoBehaviour
         {
             killer.GainEXP(15); 
         }
-
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx.die);
         StartCoroutine(DieCoroutine());
     }
     IEnumerator DieCoroutine()
@@ -478,7 +478,7 @@ public class Unit : MonoBehaviour
 
         data.hasActed = hasActed;
         data.isEnemy = isEnemy;
-
+        
         // SAVE WEAPONS
         data.weapons = new List<WeaponSaveData>();
         foreach (var w in weapons)
@@ -511,9 +511,10 @@ public class Unit : MonoBehaviour
         level = data.level;
         currentEXP = data.exp;
         expToNextLevel = data.expToNext;
-
+        
         hasActed = data.hasActed;
         isEnemy = data.isEnemy;
+        
         if (keepPosition) 
         {
             gridPosition = new Vector2Int(data.x, data.y);

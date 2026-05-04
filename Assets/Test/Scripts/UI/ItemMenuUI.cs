@@ -68,7 +68,7 @@ public class ItemMenuUI : MonoBehaviour
         // 🔥 lấy vị trí panel trên màn hình (0 → 1)
         if (rt.position.x > Screen.width / 2f)
         {
-            pos.x -= 200f;
+            pos.x -= 230f;
         }
         actionMenu.Show(index, pos);
     }

@@ -460,7 +460,8 @@ public class UnitController : MonoBehaviour
         Item item = selectedUnit.inventory[index];
 
         item.Use(selectedUnit);
-
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx.item);
+        GainHPManager.Instance.ShowGainHP(item.value, selectedUnit.transform.position);
         selectedUnit.inventory.RemoveAt(index);
 
         selectedUnit.hasActed = true;

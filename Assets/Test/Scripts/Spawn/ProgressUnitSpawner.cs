@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 
@@ -42,6 +42,9 @@ public class ProgressUnitSpawner : MonoBehaviour
             unit.LoadFromData(uData, false);
 
             unit.SetPosition(pos);
+            // 🔥 heal full khi sang map
+            unit.currentHP = unit.maxHP;
+
             unit.isEnemy = false;
             unit.transform.position = tilemap.GetCellCenterWorld((Vector3Int)pos);
             TurnManager.Instance.AddUnit(unit);

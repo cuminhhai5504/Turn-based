@@ -7,7 +7,8 @@ public class WeaponAdd : MonoBehaviour
     
     public Weapon rewardWeapon;
 
-    bool isUsed = false;
+    public string id;
+    public bool isUsed = false;
 
     public void Trigger(Unit unit)
     {
@@ -18,11 +19,12 @@ public class WeaponAdd : MonoBehaviour
             unit.weapons.Add(rewardWeapon);
             Debug.Log("Nhận weapon: " + rewardWeapon.weaponName);
             PickupPopupManager.Instance.ShowPopup("+ " + rewardWeapon.weaponName, unit.transform.position);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx.pickup);
         }
 
 
         isUsed = true;
-
+        SaveLoadManager.Instance.MarkEventUsed(id);
         // optional: ẩn object
         gameObject.SetActive(false);
     }

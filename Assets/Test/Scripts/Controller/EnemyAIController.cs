@@ -163,7 +163,7 @@ public class EnemyAIController : MonoBehaviour
         return Mathf.Abs(a.x - b.x) + Mathf.Abs(a.y - b.y);
     }
 
-    // 👉 path đơn giản (không BFS)
+    
     List<Vector2Int> FindPathBFS(Unit enemy, Vector2Int start, Vector2Int target, int moveRange)
     {
 
