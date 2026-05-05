@@ -419,6 +419,12 @@ MonoBehaviour:
     prefab: {fileID: 6281803258960879586, guid: 8d31d998e5c95a048a68330c66d40fc3, type: 3}
   - id: 5
     prefab: {fileID: 508935201325878969, guid: 90a6995349ded9c498b1faa4c824b307, type: 3}
+  - id: 6
+    prefab: {fileID: 8732425881793889841, guid: 4af08ed3b1b0f874ca7f7fcb812734ee, type: 3}
+  - id: 7
+    prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+  - id: 8
+    prefab: {fileID: 8408902669532414135, guid: 7b1c210319f0bc84e81a24c3ff996b79, type: 3}
 --- !u!4 &40466847
 Transform:
   m_ObjectHideFlags: 0
@@ -2544,7 +2550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitSpawner
   tilemap: {fileID: 630550798}
-  spawnConfig: {fileID: 11400000, guid: cb0e0db7481e1cb43971565f530058b9, type: 2}
+  spawnConfig: {fileID: 11400000, guid: 83bcf52b0b7ec3e489200f4f107752e5, type: 2}
 --- !u!4 &359162156
 Transform:
   m_ObjectHideFlags: 0

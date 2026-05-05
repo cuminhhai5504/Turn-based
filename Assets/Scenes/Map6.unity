@@ -1572,6 +1572,12 @@ MonoBehaviour:
     prefab: {fileID: 6281803258960879586, guid: 8d31d998e5c95a048a68330c66d40fc3, type: 3}
   - id: 5
     prefab: {fileID: 508935201325878969, guid: 90a6995349ded9c498b1faa4c824b307, type: 3}
+  - id: 6
+    prefab: {fileID: 8732425881793889841, guid: 4af08ed3b1b0f874ca7f7fcb812734ee, type: 3}
+  - id: 7
+    prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+  - id: 8
+    prefab: {fileID: 8408902669532414135, guid: 7b1c210319f0bc84e81a24c3ff996b79, type: 3}
 --- !u!4 &314490002
 Transform:
   m_ObjectHideFlags: 0
@@ -8179,19 +8185,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapDialogue
   dialogueLines:
-  - "-Anh em sinh \u0111\xF4i-C\xE1c ng\u01B0\u1EDDi l\xE0 ai, sao c\xF3 th\u1EC3
-    v\u01B0\u1EE3t qua b\u1ECDn qu\xE1i v\u1EADt ph\xEDa sau v\u1EADy?"
-  - "-B\u1EA1n-Ta l\xE0 ho\xE0ng t\u1EED c\u1EE7a v\u01B0\u01A1ng qu\u1ED1c, \u0111i
-    c\xF9ng c\xE1c chi\u1EBFn binh c\u1EE7a ta gi\u1EA3i c\u1EE9u qu\u1ED1c \u0111\xF4"
-  - "-Anh em sinh \u0111\xF4i-R\u1EA5t h\xE2n h\u1EA1nh g\u1EB7p ng\xE0i, ch\xFAng
-    t\xF4i th\u1EA5y nhi\u1EC1u qu\xE1i v\u1EADt xu\u1EA5t hi\u1EC7n n\xEAn \u0111\xE3
-    l\u1EBBn qua ch\xFAng \u0111\u1EBFn \u0111\xE2y, kh\xF4ng ng\u1EDD v\xF9ng \u0111\u1EA5t
-    ph\xEDa tr\u01B0\u1EDBc \u0111\xE3 b\u1ECB \u0103n m\xF2n b\u1EDFi n\u0103ng
-    l\u1EF1c h\u1EAFc \xE1m"
-  - "-B\u1EA1n-Ch\u1EC9 c\xF3 v\u01B0\u1EE3t qua \u0111\xE1m qu\xE1i v\u1EADt ch\xFAng
-    ta m\u1EDBi c\xF3 th\u1EC3 ti\u1EBFn g\u1EA7n h\u01A1n s\u1EF1 th\u1EADt, c\xE1c
-    anh s\u1EBD \u0111i c\xF9ng t\xF4i ch\u1EE9?"
-  - "-Anh em sinh \u0111\xF4i-OK GOAT"
+  - "-B\u1EA1n-Con \u0111\xE3 quay l\u1EA1i r\u1ED3i th\u01B0a cha"
+  - "-Qu\u1ED1c v\u01B0\u01A1ng-Sao con l\u1EA1i v\u1EC1 \u0111\xE2y, huy\u1EBFt
+    m\u1EA1ch c\u1EE7a ta c\u1EA7n \u0111\u01B0\u1EE3c k\xE9o d\xE0i"
+  - "-B\u1EA1n-H\xE3y tin \u1EDF con v\xE0 nh\u1EEFng v\u1ECB anh h\xF9ng n\xE0y,
+    ...t\u1EA5t c\u1EA3 h\u1ED9 gi\xE1!!!"
+  - "-Ph\xE1p su c\u1EA5m ch\xFA-Haha, n\u1EBFu \u0111\u1EE9a con ngu ng\u1ED1c c\u1EE7a
+    ng\u01B0\u1EDDi \u0111\xE3 ch\u1ECDn v\u1EADy th\xEC h\xE3y c\xF9ng nhau xu\u1ED1ng
+    ho\xE0ng tuy\u1EC1n \u0111i"
+  - "-B\u1EA1n-Ng\u01B0\u01A1i h\xE3y t\u1EF1 xu\u1ED1ng d\u01B0\u1EDBi \u0111\xF3
+    m\xE0 \u0111o\xE0n t\u1EE5 v\u1EDBi nh\u1EEFng t\xEAn ta \u0111\xE3 \u0111\xE1nh
+    b\u1EA1i "
 --- !u!4 &1053120258
 Transform:
   m_ObjectHideFlags: 0
@@ -13995,7 +13999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitSpawner
   tilemap: {fileID: 330583136}
-  spawnConfig: {fileID: 11400000, guid: cb0e0db7481e1cb43971565f530058b9, type: 2}
+  spawnConfig: {fileID: 11400000, guid: 69dacadaac7dd8f42bc5f0982f28de97, type: 2}
 --- !u!4 &1712353920
 Transform:
   m_ObjectHideFlags: 0

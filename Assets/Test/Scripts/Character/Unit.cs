@@ -337,7 +337,7 @@ public class Unit : MonoBehaviour
         }
         maxHP += 2;
         expToNextLevel += 5;
-        currentHP = maxHP;
+        currentHP += 2;
         
         var newStats = GetStats();
         LevelUpUI ui = FindFirstObjectByType<LevelUpUI>();

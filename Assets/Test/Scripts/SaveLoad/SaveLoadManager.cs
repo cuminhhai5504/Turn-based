@@ -62,7 +62,8 @@ public class SaveLoadManager : MonoBehaviour
             Destroy(u.gameObject);
         }
 
-        yield return null;
+        yield return new WaitUntil(() => UnitDatabase.Instance != null);
+        yield return new WaitUntil(() => TurnManager.Instance != null);
 
         // 🔥 SPAWN lại unit
         foreach (var uData in data.units)

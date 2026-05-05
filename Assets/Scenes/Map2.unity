@@ -2288,7 +2288,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4140465d2d71b4a6a83a1be32f0a9880, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6477,7 +6477,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 10.482461
+      m_AnimationSpeed: 9.974176
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: 3, z: 0}
@@ -6500,7 +6500,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 10.84822
+      m_AnimationSpeed: 9.1912
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -12099,7 +12099,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c3dedc0ecab4047cc891892591447655, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12325,7 +12325,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 2bb7266a2b9e4494db34c60ba04a19a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16716,6 +16716,12 @@ MonoBehaviour:
     prefab: {fileID: 6281803258960879586, guid: 8d31d998e5c95a048a68330c66d40fc3, type: 3}
   - id: 5
     prefab: {fileID: 508935201325878969, guid: 90a6995349ded9c498b1faa4c824b307, type: 3}
+  - id: 6
+    prefab: {fileID: 8732425881793889841, guid: 4af08ed3b1b0f874ca7f7fcb812734ee, type: 3}
+  - id: 7
+    prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+  - id: 8
+    prefab: {fileID: 8408902669532414135, guid: 7b1c210319f0bc84e81a24c3ff996b79, type: 3}
 --- !u!4 &2123607092
 Transform:
   m_ObjectHideFlags: 0
