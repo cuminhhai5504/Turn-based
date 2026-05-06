@@ -814,7 +814,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Continue
 --- !u!222 &115962368
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1482,6 +1482,100 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.14306, y: -0.31962, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &252538532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252538534}
+  - component: {fileID: 252538533}
+  m_Layer: 0
+  m_Name: WeaponDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &252538533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252538532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94adff9ca56b7574ca43eff1e0d5b482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDatabase
+  weaponTemplates:
+  - weaponName: Knife
+    id: 1
+    minRange: 1
+    maxRange: 1
+    damage: 3
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Spear
+    id: 2
+    minRange: 1
+    maxRange: 2
+    damage: 3
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Bow
+    id: 3
+    minRange: 2
+    maxRange: 2
+    damage: 4
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Heavy Sword
+    id: 4
+    minRange: 1
+    maxRange: 1
+    damage: 5
+    maxDurability: 4
+    currentDurability: 0
+  - weaponName: Monster knife
+    id: 5
+    minRange: 1
+    maxRange: 1
+    damage: 3
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Bite
+    id: 6
+    minRange: 1
+    maxRange: 1
+    damage: 3
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Heavy Bow
+    id: 7
+    minRange: 2
+    maxRange: 2
+    damage: 5
+    maxDurability: 4
+    currentDurability: 0
+--- !u!4 &252538534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252538532}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65422, y: -0.07546, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3587,93 +3681,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &364098588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 364098590}
-  - component: {fileID: 364098589}
-  m_Layer: 0
-  m_Name: WeaponDatabase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &364098589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364098588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94adff9ca56b7574ca43eff1e0d5b482, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponDatabase
-  weaponTemplates:
-  - weaponName: Knife
-    id: 1
-    minRange: 1
-    maxRange: 1
-    damage: 10
-    maxDurability: 10
-    currentDurability: 0
-  - weaponName: Spear
-    id: 2
-    minRange: 1
-    maxRange: 2
-    damage: 3
-    maxDurability: 10
-    currentDurability: 0
-  - weaponName: Bow
-    id: 3
-    minRange: 2
-    maxRange: 2
-    damage: 4
-    maxDurability: 10
-    currentDurability: 0
-  - weaponName: Heavy Sword
-    id: 4
-    minRange: 1
-    maxRange: 1
-    damage: 5
-    maxDurability: 2
-    currentDurability: 0
-  - weaponName: Monster knife
-    id: 5
-    minRange: 1
-    maxRange: 1
-    damage: 3
-    maxDurability: 10
-    currentDurability: 0
-  - weaponName: Shield
-    id: 6
-    minRange: 1
-    maxRange: 1
-    damage: 5
-    maxDurability: 10
-    currentDurability: 0
---- !u!4 &364098590
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364098588}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65422, y: -0.07546, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393732737
 GameObject:
   m_ObjectHideFlags: 0
@@ -6259,7 +6266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 10, y: 50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701156440
@@ -6310,10 +6317,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6699,10 +6706,10 @@ RectTransform:
   - {fileID: 1510673771}
   m_Father: {fileID: 572987601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 330, y: 0}
-  m_SizeDelta: {x: 200, y: 250}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 66, y: 0}
+  m_SizeDelta: {x: 170, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &724104282
 CanvasGroup:
@@ -8136,8 +8143,8 @@ MonoBehaviour:
     minRange: 1
     maxRange: 1
     damage: 5
-    maxDurability: 10
-    currentDurability: 10
+    maxDurability: 4
+    currentDurability: 4
   id: Weapon_10
   isUsed: 0
 --- !u!4 &1034919119
@@ -8433,7 +8440,7 @@ GameObject:
   - component: {fileID: 1098162384}
   - component: {fileID: 1098162383}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8505,7 +8512,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1236124007}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: BackToSelectLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9907,10 +9914,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProgressUnitSpawner
   tilemap: {fileID: 330583136}
   deploymentPoints:
+  - {fileID: 295860165}
+  - {fileID: 1915990878}
+  - {fileID: 1723542497}
+  - {fileID: 1989158260}
+  - {fileID: 1555598674}
   - {fileID: 1282492934}
   - {fileID: 1520954799}
-  - {fileID: 1555598674}
-  - {fileID: 1989158260}
+  - {fileID: 1179919978}
+  - {fileID: 1965702332}
 --- !u!4 &1254517367
 Transform:
   m_ObjectHideFlags: 0
@@ -14673,10 +14685,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -16967,7 +16979,6 @@ SceneRoots:
   - {fileID: 1861564227}
   - {fileID: 28558707}
   - {fileID: 1989158261}
-  - {fileID: 364098590}
   - {fileID: 1915990879}
   - {fileID: 1208478316}
   - {fileID: 123507612}
@@ -16996,3 +17007,4 @@ SceneRoots:
   - {fileID: 136188611}
   - {fileID: 1352007476}
   - {fileID: 1906026661}
+  - {fileID: 252538534}

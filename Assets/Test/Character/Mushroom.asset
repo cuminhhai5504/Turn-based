@@ -28,9 +28,9 @@ MonoBehaviour:
     value: 3
   startWeapons:
   - weaponName: Bite
-    id: 7
+    id: 6
     minRange: 1
     maxRange: 1
     damage: 3
-    maxDurability: 10
-    currentDurability: 10
+    maxDurability: 20
+    currentDurability: 20

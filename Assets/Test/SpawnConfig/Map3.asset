@@ -12,4 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd431bf5bf5f02458643a4a09b7e3dd, type: 3}
   m_Name: Map3
   m_EditorClassIdentifier: Assembly-CSharp::SpawnConfig
-  units: []
+  units:
+  - prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+    gridPosition: {x: 0, y: 0}
+    isEnemy: 1
+  - prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+    gridPosition: {x: 0, y: -1}
+    isEnemy: 1
+  - prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+    gridPosition: {x: 0, y: -2}
+    isEnemy: 1
+  - prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+    gridPosition: {x: 1, y: 0}
+    isEnemy: 1
+  - prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+    gridPosition: {x: 1, y: -1}
+    isEnemy: 1
+  - prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+    gridPosition: {x: 0, y: 1}
+    isEnemy: 1
+  - prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
+    gridPosition: {x: 1, y: -2}
+    isEnemy: 1

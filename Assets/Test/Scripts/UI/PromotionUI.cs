@@ -21,7 +21,7 @@ public class PromotionUI : MonoBehaviour
     public void Show(Unit unit)
     {
         
-        TurnManager.Instance.isUIBlocking = true;
+        
         currentUnit = unit;
         panel.SetActive(true);
         

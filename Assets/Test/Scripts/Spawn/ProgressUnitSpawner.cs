@@ -9,6 +9,8 @@ public class ProgressUnitSpawner : MonoBehaviour
 
     void Start()
     {
+        if (SaveLoadManager.Instance.isContinuing)
+            return;
         LoadProgressUnits();
     }
 

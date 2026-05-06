@@ -167,12 +167,13 @@ public class UnitController : MonoBehaviour
             return;
         }
         if (isMenuOpen)
-        { 
+        {
             // 👉 Click ra ngoài → auto cancel
             UndoMove();
             CloseAllMenus();
             return;
         }
+
         if (unit != null && !unit.isEnemy)
         {
             if (selectedUnit != null && selectedUnit != unit)
@@ -189,7 +190,7 @@ public class UnitController : MonoBehaviour
             SelectUnit(unit);
             return;
         }
-
+        
         // 🔵 Di chuyển
         if (selectedUnit != null && currentState == GameState.Moving)
         {

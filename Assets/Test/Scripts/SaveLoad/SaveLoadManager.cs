@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class SaveLoadManager : MonoBehaviour
 {
     public static SaveLoadManager Instance;
+    public bool isContinuing = false;
 
-    
     public BattleSaveData cachedData;
 
     void Awake()
@@ -55,6 +55,8 @@ public class SaveLoadManager : MonoBehaviour
     public IEnumerator LoadRoutine(BattleSaveData data)
     {
         Debug.Log("LOAD START");
+        yield return new WaitUntil(() => UnitDatabase.Instance != null);
+        yield return new WaitUntil(() => TurnManager.Instance != null);
         TurnManager.Instance.isLoading = true; // 🔥 bật loading
         // 🔥 XÓA unit cũ
         foreach (var u in FindObjectsByType<Unit>(FindObjectsSortMode.None))
@@ -62,8 +64,6 @@ public class SaveLoadManager : MonoBehaviour
             Destroy(u.gameObject);
         }
 
-        yield return new WaitUntil(() => UnitDatabase.Instance != null);
-        yield return new WaitUntil(() => TurnManager.Instance != null);
 
         // 🔥 SPAWN lại unit
         foreach (var uData in data.units)
@@ -95,7 +95,7 @@ public class SaveLoadManager : MonoBehaviour
         // 🔥 UNLOCK game
         TurnManager.Instance.isEventRunning = false;
         TurnManager.Instance.isUIBlocking = false;
-
+        SaveLoadManager.Instance.isContinuing = false;
         Debug.Log("LOAD DONE");
 
     }
@@ -109,7 +109,7 @@ public class SaveLoadManager : MonoBehaviour
 
         string json = PlayerPrefs.GetString("SAVE_DATA");
         cachedData = JsonUtility.FromJson<BattleSaveData>(json);
-        
+        isContinuing = true;
         // 🔥 đưa scene cần load cho LoadingScene
         SceneLoader.sceneToLoad = cachedData.sceneName;
 
@@ -162,13 +162,7 @@ public class SaveLoadManager : MonoBehaviour
         TryAutoSave();
     }
 
-    void OnApplicationPause(bool pause)
-    {
-        if (pause)
-        {
-            TryAutoSave();
-        }
-    }
+    
     void TryAutoSave()
     {
         if (TurnManager.Instance == null) return;

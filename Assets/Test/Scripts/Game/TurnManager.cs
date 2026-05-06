@@ -138,6 +138,7 @@ public class TurnManager : MonoBehaviour
                 if (unit != null)
                     unit.ResetTurn();
             }
+
         }
 
         enemyAI.StartEnemyTurn();

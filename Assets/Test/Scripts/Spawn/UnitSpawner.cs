@@ -11,7 +11,7 @@ public class UnitSpawner : MonoBehaviour
     {
         // 🔥 Nếu đang Continue → KHÔNG spawn
         if (SaveLoadManager.Instance != null &&
-            SaveLoadManager.Instance.cachedData != null)
+            SaveLoadManager.Instance.isContinuing)
         {
             Debug.Log("Skip spawn (Continue)");
             return;

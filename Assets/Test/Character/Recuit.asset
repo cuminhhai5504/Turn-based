@@ -22,10 +22,6 @@ MonoBehaviour:
   currentEXP: 0
   expToNextLevel: 10
   startItems:
-  - itemName: Healing Potion
-    type: 0
-    id: 1
-    value: 5
   - itemName: Bandage
     type: 0
     id: 2
@@ -35,13 +31,6 @@ MonoBehaviour:
     id: 1
     minRange: 1
     maxRange: 1
-    damage: 10
-    maxDurability: 10
-    currentDurability: 10
-  - weaponName: Shield
-    id: 6
-    minRange: 1
-    maxRange: 1
-    damage: 5
-    maxDurability: 10
-    currentDurability: 10
+    damage: 3
+    maxDurability: 20
+    currentDurability: 20

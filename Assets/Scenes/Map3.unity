@@ -1740,6 +1740,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &236310759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236310761}
+  - component: {fileID: 236310760}
+  m_Layer: 0
+  m_Name: WeaponDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &236310760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236310759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94adff9ca56b7574ca43eff1e0d5b482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDatabase
+  weaponTemplates:
+  - weaponName: Knife
+    id: 1
+    minRange: 1
+    maxRange: 1
+    damage: 3
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Spear
+    id: 2
+    minRange: 1
+    maxRange: 2
+    damage: 3
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Bow
+    id: 3
+    minRange: 2
+    maxRange: 2
+    damage: 4
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Heavy Sword
+    id: 4
+    minRange: 1
+    maxRange: 1
+    damage: 5
+    maxDurability: 4
+    currentDurability: 0
+  - weaponName: Monster knife
+    id: 5
+    minRange: 1
+    maxRange: 1
+    damage: 3
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Bite
+    id: 6
+    minRange: 1
+    maxRange: 1
+    damage: 3
+    maxDurability: 20
+    currentDurability: 0
+  - weaponName: Heavy Bow
+    id: 7
+    minRange: 2
+    maxRange: 2
+    damage: 5
+    maxDurability: 4
+    currentDurability: 0
+--- !u!4 &236310761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236310759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65422, y: -0.07546, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &246684627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,10 +4078,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -7060,7 +7154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Continue
 --- !u!222 &757774631
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8085,6 +8179,11 @@ MonoBehaviour:
   - {fileID: 1980436490}
   - {fileID: 432720004}
   - {fileID: 2099811028}
+  - {fileID: 334771277}
+  - {fileID: 180587048}
+  - {fileID: 1167856543}
+  - {fileID: 218090839}
+  - {fileID: 27464115}
 --- !u!4 &935799753
 Transform:
   m_ObjectHideFlags: 0
@@ -8715,10 +8814,10 @@ RectTransform:
   - {fileID: 1953462967}
   m_Father: {fileID: 1235191490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 330, y: 0}
-  m_SizeDelta: {x: 200, y: 250}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 66, y: 0}
+  m_SizeDelta: {x: 170, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1075353324
 CanvasGroup:
@@ -9964,7 +10063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.69803923}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10552,7 +10651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 10, y: 50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336803173
@@ -10603,10 +10702,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -11498,7 +11597,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 9.813398
+      m_AnimationSpeed: 9.283002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -14992,7 +15091,7 @@ GameObject:
   - component: {fileID: 1868629896}
   - component: {fileID: 1868629895}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15064,7 +15163,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1135452732}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: BackToSelectLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15992,93 +16091,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042114280}
   m_CullTransparentMesh: 1
---- !u!1 &2054581291
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2054581293}
-  - component: {fileID: 2054581292}
-  m_Layer: 0
-  m_Name: WeaponDatabase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2054581292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054581291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94adff9ca56b7574ca43eff1e0d5b482, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponDatabase
-  weaponTemplates:
-  - weaponName: Knife
-    id: 1
-    minRange: 1
-    maxRange: 1
-    damage: 10
-    maxDurability: 10
-    currentDurability: 0
-  - weaponName: Spear
-    id: 2
-    minRange: 1
-    maxRange: 2
-    damage: 3
-    maxDurability: 10
-    currentDurability: 0
-  - weaponName: Bow
-    id: 3
-    minRange: 2
-    maxRange: 2
-    damage: 4
-    maxDurability: 10
-    currentDurability: 0
-  - weaponName: Heavy Sword
-    id: 4
-    minRange: 1
-    maxRange: 1
-    damage: 5
-    maxDurability: 2
-    currentDurability: 0
-  - weaponName: Monster knife
-    id: 5
-    minRange: 1
-    maxRange: 1
-    damage: 3
-    maxDurability: 10
-    currentDurability: 0
-  - weaponName: Shield
-    id: 6
-    minRange: 1
-    maxRange: 1
-    damage: 5
-    maxDurability: 10
-    currentDurability: 0
---- !u!4 &2054581293
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054581291}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65422, y: -0.07546, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2056194323
 GameObject:
   m_ObjectHideFlags: 0
@@ -16823,7 +16835,6 @@ SceneRoots:
   - {fileID: 126086239}
   - {fileID: 1314772619}
   - {fileID: 2056194325}
-  - {fileID: 2054581293}
   - {fileID: 1049710319}
   - {fileID: 1751826139}
   - {fileID: 1179612484}
@@ -16835,3 +16846,4 @@ SceneRoots:
   - {fileID: 488537850}
   - {fileID: 341407991}
   - {fileID: 223893773}
+  - {fileID: 236310761}

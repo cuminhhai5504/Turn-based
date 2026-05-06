@@ -26,10 +26,6 @@ MonoBehaviour:
     type: 0
     id: 1
     value: 5
-  - itemName: Bandage
-    type: 0
-    id: 2
-    value: 3
   startWeapons:
   - weaponName: Heavy Sword
     id: 4

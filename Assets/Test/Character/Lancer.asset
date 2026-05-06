@@ -26,15 +26,11 @@ MonoBehaviour:
     type: 0
     id: 1
     value: 5
-  - itemName: Bandage
-    type: 0
-    id: 2
-    value: 3
   startWeapons:
   - weaponName: Spear
     id: 2
     minRange: 1
     maxRange: 2
     damage: 3
-    maxDurability: 10
-    currentDurability: 10
+    maxDurability: 20
+    currentDurability: 20

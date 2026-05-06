@@ -343,13 +343,13 @@ public class Unit : MonoBehaviour
         LevelUpUI ui = FindFirstObjectByType<LevelUpUI>();
         if (ui != null)
         {
-            
+            TurnManager.Instance.isEventRunning = true;
+            TurnManager.Instance.isUIBlocking = true;
             ui.ShowLevelUp(oldStats, newStats);
         }
         
         Debug.Log(name + " LEVEL UP! → Lv " + level);
-        TurnManager.Instance.CheckEndPlayerTurn();
-        GameManager.Instance.CheckGameResult();
+        
     }
     public class UnitStatsSnapshot
     {
@@ -380,7 +380,7 @@ public class Unit : MonoBehaviour
         bool enemy = isEnemy;
         bool acted = hasActed;
         // Lấy world position từ tilemap
-        Vector3 worldPos = FindFirstObjectByType<UnityEngine.Tilemaps.Tilemap>()
+        Vector3 worldPos = FindFirstObjectByType<Tilemap>()
             .GetCellCenterWorld((Vector3Int)pos);
 
         // Spawn unit mới
@@ -388,6 +388,8 @@ public class Unit : MonoBehaviour
 
         Unit newUnit = newUnitObj.GetComponent<Unit>();
         newUnit.Init(newUnit.data); // 🔥 bắt buộc
+
+
         // Gán lại thông tin cơ bản
         newUnit.SetPosition(pos);
         newUnit.isEnemy = enemy;

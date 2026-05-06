@@ -32,7 +32,7 @@ public class UnitEXPUI : MonoBehaviour
 
     public IEnumerator HideAfter()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         expBarRoot.SetActive(false);
     }
     public void ShowInstant(int current, int max)
