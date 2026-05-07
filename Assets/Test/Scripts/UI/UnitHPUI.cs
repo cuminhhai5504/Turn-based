@@ -9,7 +9,7 @@ public class UnitHPUI : MonoBehaviour
     void Update()
     {
         if (unit == null) return;
-        float percent = (float)unit.currentHP / unit.data.maxHP;
+        float percent = (float)unit.currentHP / unit.maxHP;
         hpFill.fillAmount = percent;
     }
 }

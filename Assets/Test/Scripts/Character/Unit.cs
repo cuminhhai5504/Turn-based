@@ -200,7 +200,7 @@ public class Unit : MonoBehaviour
         {
             target.FaceTarget(transform.position);
             target.animator.SetTrigger("Attack");
-
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx.attack);
             yield return new WaitForSeconds(0.3f);
 
             TakeDamage(counterWeapon.damage, target);
@@ -312,6 +312,7 @@ public class Unit : MonoBehaviour
         {
             TurnManager.Instance.isEventRunning = false;
         }
+        GameManager.Instance.CheckGameResult();
     }
     IEnumerator WaitAndShowPromotion()
     {
@@ -411,7 +412,6 @@ public class Unit : MonoBehaviour
             {
                 expUI.ShowInstant(currentEXP, expToNextLevel);
 
-                // 🔥 tự ẩn sau 2s
                 StartCoroutine(expUI.HideAfter());
             }
         }

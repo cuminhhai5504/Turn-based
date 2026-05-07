@@ -175,7 +175,7 @@ public class SaveLoadManager : MonoBehaviour
         // 🔥 FIX QUAN TRỌNG
         if (TurnManager.Instance.currentTurn == TurnManager.TurnState.EnemyTurn)
             return;
-
+        if (GameManager.Instance.currentState != GameState.Playing) return;
         Debug.Log("AUTO SAVE...");
         SaveGame();
     }
