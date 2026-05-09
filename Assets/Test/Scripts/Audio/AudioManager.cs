@@ -1,81 +1,140 @@
-﻿using DG.Tweening;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
+    [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
 
+    [Header("Mixer")]
     public AudioMixer mixer;
+
+    [Header("Library")]
     public SFXLibrary sfx;
 
+    [Header("Mixer Groups")]
     public AudioMixerGroup musicGroup;
     public AudioMixerGroup sfxGroup;
 
-    void Awake()
+    private const string MUSIC_KEY = "MusicVolume";
+    private const string SFX_KEY = "SFXVolume";
+
+    private float musicVolume = 1f;
+    private float sfxVolume = 1f;
+
+    // =========================
+    // PROPERTIES
+    // =========================
+
+    public float MusicVolume => musicVolume;
+    public float SFXVolume => sfxVolume;
+
+    // =========================
+    // UNITY
+    // =========================
+
+    private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            // 🔥 KẾT NỐI MIXER
-            musicSource.outputAudioMixerGroup = musicGroup;
-            sfxSource.outputAudioMixerGroup = sfxGroup;
-        }
-        else
+        // Singleton
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
-    }
-    void Start()
-    {
-        float music = PlayerPrefs.GetFloat("MusicVolume", 1f);
-        float sfx = PlayerPrefs.GetFloat("SFXVolume", 1f);
 
-        SetMusicVolume(music);
-        SetSFXVolume(sfx);
-    }
+        Instance = this;
 
-    // ================= MUSIC =================
-    public void PlayMusic(AudioClip clip)
-    {
-        musicSource.clip = clip;
-        musicSource.loop = true;
-        musicSource.Play();
-    }
-    
-    // ================= SFX =================
-    public void PlaySFX(AudioClip clip)
-    {
-        sfxSource.PlayOneShot(clip);
+        DontDestroyOnLoad(gameObject);
+
+        // Connect mixer groups
+        musicSource.outputAudioMixerGroup = musicGroup;
+        sfxSource.outputAudioMixerGroup = sfxGroup;
+
+        LoadVolume();
+        ApplyVolume();
     }
 
-    // ================= VOLUME =================
+    // =========================
+    // LOAD / SAVE
+    // =========================
+
+    private void LoadVolume()
+    {
+        musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
+        sfxVolume = PlayerPrefs.GetFloat(SFX_KEY, 1f);
+    }
+
+    private void SaveVolume()
+    {
+        PlayerPrefs.SetFloat(MUSIC_KEY, musicVolume);
+        PlayerPrefs.SetFloat(SFX_KEY, sfxVolume);
+
+        PlayerPrefs.Save();
+    }
+
+    // =========================
+    // APPLY
+    // =========================
+
+    private void ApplyVolume()
+    {
+        mixer.SetFloat(
+            "MusicVolume",
+            Mathf.Log10(Mathf.Clamp(musicVolume, 0.0001f, 1f)) * 20
+        );
+
+        mixer.SetFloat(
+            "SFXVolume",
+            Mathf.Log10(Mathf.Clamp(sfxVolume, 0.0001f, 1f)) * 20
+        );
+    }
+
+    // =========================
+    // VOLUME
+    // =========================
+
     public void SetMusicVolume(float value)
     {
-        value = Mathf.Clamp(value, 0.0001f, 1f);
-        mixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20);
-        PlayerPrefs.SetFloat("MusicVolume", value);
-        PlayerPrefs.Save();
+        musicVolume = value;
+
+        ApplyVolume();
+        SaveVolume();
     }
 
     public void SetSFXVolume(float value)
     {
-        value = Mathf.Clamp(value, 0.0001f, 1f);
-        mixer.SetFloat("SFXVolume", Mathf.Log10(value) * 20);
-        PlayerPrefs.SetFloat("SFXVolume", value);
-        PlayerPrefs.Save();
-    }
-    public void SyncSliders(Slider music, Slider sfx)
-    {
-        float musicVal = PlayerPrefs.GetFloat("MusicVolume", 1f);
-        float sfxVal = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        sfxVolume = value;
 
-        music.SetValueWithoutNotify(musicVal);
-        sfx.SetValueWithoutNotify(sfxVal);
+        ApplyVolume();
+        SaveVolume();
+    }
+
+    // =========================
+    // MUSIC
+    // =========================
+
+    public void PlayMusic(AudioClip clip)
+    {
+        if (musicSource.clip == clip)
+            return;
+
+        musicSource.clip = clip;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    // =========================
+    // SFX
+    // =========================
+
+    public void PlaySFX(AudioClip clip)
+    {
+        if (clip == null)
+            return;
+
+        sfxSource.PlayOneShot(clip);
     }
 }
