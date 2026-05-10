@@ -10,34 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1aa92664bb2a2e4098a79ed4ef8627a, type: 3}
-  m_Name: Warrior
+  m_Name: Boss
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
-  unitName: Warrior
-  id: 2
-  maxHP: 15
+  unitName: Black Wizard
+  id: 11
+  maxHP: 25
   currentHP: 0
-  moveRange: 3
+  moveRange: 4
   attackRange: 1
-  level: 1
+  level: 5
   currentEXP: 0
-  expToNextLevel: 15
+  expToNextLevel: 0
   startItems:
-  - itemName: Healing Potion
+  - itemName: Bandage
     type: 0
-    id: 1
-    value: 5
+    id: 2
+    value: 3
   startWeapons:
-  - weaponName: Heavy Sword
-    id: 4
-    minRange: 1
-    maxRange: 1
-    damage: 5
-    maxDurability: 4
-    currentDurability: 4
-  - weaponName: Steel Sword
-    id: 8
-    minRange: 1
-    maxRange: 1
-    damage: 4
-    maxDurability: 20
-    currentDurability: 20
+  - weaponName: Mana Rises
+    id: 11
+    minRange: 2
+    maxRange: 3
+    damage: 7
+    maxDurability: 36
+    currentDurability: 36

@@ -55,3 +55,12 @@ MonoBehaviour:
   - prefab: {fileID: 508935201325878969, guid: 90a6995349ded9c498b1faa4c824b307, type: 3}
     gridPosition: {x: -2, y: 0}
     isEnemy: 1
+  - prefab: {fileID: 8602794225424231878, guid: 3968a38c69a10d24b9662b84503639e2, type: 3}
+    gridPosition: {x: 1, y: 0}
+    isEnemy: 1
+  - prefab: {fileID: 8602794225424231878, guid: 3968a38c69a10d24b9662b84503639e2, type: 3}
+    gridPosition: {x: 1, y: 1}
+    isEnemy: 1
+  - prefab: {fileID: 8602794225424231878, guid: 3968a38c69a10d24b9662b84503639e2, type: 3}
+    gridPosition: {x: 1, y: 1}
+    isEnemy: 1

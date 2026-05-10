@@ -456,7 +456,7 @@ public class Unit : MonoBehaviour
 
         transform.DOKill();
         spriteRenderer.DOKill();
-
+        GameManager.Instance.CheckGameResult();
         Destroy(gameObject);
     }
     public void ResetTurn()

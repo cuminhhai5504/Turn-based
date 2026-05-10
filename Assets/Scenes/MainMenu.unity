@@ -3064,6 +3064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuUI
   fadePanel: {fileID: 1415693825}
+  continueButton: {fileID: 1322945634}
 --- !u!114 &1853721107
 MonoBehaviour:
   m_ObjectHideFlags: 0

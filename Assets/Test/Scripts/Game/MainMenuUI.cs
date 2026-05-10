@@ -6,10 +6,11 @@ using DG.Tweening;
 public class MainMenuUI : MonoBehaviour
 {
     public Image fadePanel;
+    public Button continueButton;
     void Start()
     {
         fadePanel.DOFade(0, 1f);
-        
+        continueButton.gameObject.SetActive(PlayerPrefs.HasKey("SAVE_DATA"));
     }
     public void OnPlay()
     {

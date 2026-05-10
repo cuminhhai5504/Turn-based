@@ -601,6 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Unit
   gridPosition: {x: 0, y: 0}
   isEnemy: 0
+  unitName: 
   moveRange: 3
   maxHP: 10
   currentHP: 0
@@ -618,6 +619,8 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     damage: 0
+    maxDurability: 0
+    currentDurability: 0
   data: {fileID: 11400000, guid: ad6f52bbf08bdba4981674a455755097, type: 2}
 --- !u!1 &7736272673808303815
 GameObject:

@@ -31,3 +31,6 @@ MonoBehaviour:
   - prefab: {fileID: 6604330979371591192, guid: 9853fc06383b6514981c69391cc7cbf3, type: 3}
     gridPosition: {x: 4, y: -4}
     isEnemy: 1
+  - prefab: {fileID: 8602794225424231878, guid: 3968a38c69a10d24b9662b84503639e2, type: 3}
+    gridPosition: {x: 7, y: -1}
+    isEnemy: 1
