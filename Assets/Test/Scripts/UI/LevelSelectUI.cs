@@ -29,7 +29,7 @@ public class LevelSelectUI : MonoBehaviour
 
     void SetupButton(Button btn, int levelIndex, int unlockedLevel)
     {
-        if (levelIndex <= unlockedLevel)
+        if (levelIndex == unlockedLevel)
         {
             btn.interactable = true;
             btn.onClick.AddListener(() => SelectLevel(levelIndex));

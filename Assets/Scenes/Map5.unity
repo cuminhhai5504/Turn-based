@@ -3120,7 +3120,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 10.641914
+      m_AnimationSpeed: 10.359596
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -12037,6 +12037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6fe86edf764bcf42ab2a8a6bf62f569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapDialogue
+  dialogueID: 5
   dialogueLines:
   - "-Ph\xE1p s\u01B0 h\u1EAFc \xE1m-\u0110\u1EBFn \u0111\xE2y l\xE0 \u0111\u1EE7
     r\u1ED3i nh\xF3c con, ph\xEDa tr\u01B0\u1EDBc kh\xF4ng c\xF3 vi\u1EC7c c\u1EE7a

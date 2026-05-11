@@ -97,12 +97,9 @@ public class GameManager : MonoBehaviour
         // 🔥 Level đã mở
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
-        // 🔥 Nếu thắng level cao nhất đã mở → mở tiếp
-        if (currentLevel >= unlockedLevel)
-        {
-            PlayerPrefs.SetInt("UnlockedLevel", currentLevel + 1);
-            PlayerPrefs.Save();
-        }
+        PlayerPrefs.SetInt("UnlockedLevel", currentLevel + 1);
+        PlayerPrefs.Save();
+
         SaveProgressAfterBattle();
         Debug.Log("Victory!");
         UIManager.Instance.ShowResult("Victory!");

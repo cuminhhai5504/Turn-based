@@ -2660,6 +2660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6fe86edf764bcf42ab2a8a6bf62f569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapDialogue
+  dialogueID: 1
   dialogueLines:
   - "V\u01B0\u01A1ng qu\u1ED1c n\xE0y \u0111ang d\u1EA7n th\u1ED1i n\xE1t, phe c\xE1nh
     \u1EE7ng h\u1ED9 ph\xE9p thu\u1EADt \u0111en \u0111ang d\u1EA7n chi\u1EBFm l\u1EA5y
@@ -6339,7 +6340,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 9.887869
+      m_AnimationSpeed: 9.78746
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: 3, z: 0}
@@ -6362,7 +6363,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 9.138603
+      m_AnimationSpeed: 10.417246
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:

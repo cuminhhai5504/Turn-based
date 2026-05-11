@@ -7294,6 +7294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6fe86edf764bcf42ab2a8a6bf62f569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapDialogue
+  dialogueID: 3
   dialogueLines:
   - "\u0110\xE2y l\xE0 con \u0111\u01B0\u1EDDng duy nh\u1EA5t d\u1EABn t\u1EDBi qu\u1ED1c
     \u0111\xF4, th\u1EADt may th\xE1p canh kh\xF4ng h\u1EC1 c\xF3 l\xEDnh g\xE1c
@@ -11401,7 +11402,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 10.117673
+      m_AnimationSpeed: 10.166668
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:

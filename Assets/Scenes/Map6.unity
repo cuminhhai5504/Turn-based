@@ -7957,6 +7957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6fe86edf764bcf42ab2a8a6bf62f569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapDialogue
+  dialogueID: 6
   dialogueLines:
   - "-B\u1EA1n-Con \u0111\xE3 quay l\u1EA1i r\u1ED3i th\u01B0a cha"
   - "-Qu\u1ED1c v\u01B0\u01A1ng-Sao con l\u1EA1i v\u1EC1 \u0111\xE2y, huy\u1EBFt

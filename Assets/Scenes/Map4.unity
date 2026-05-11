@@ -8648,6 +8648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6fe86edf764bcf42ab2a8a6bf62f569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapDialogue
+  dialogueID: 4
   dialogueLines:
   - "-Tr\u1ED9m ho\xE0n l\u01B0\u01A1ng-C\xE1c ng\u01B0\u1EDDi l\xE0 ai, sao c\xF3
     th\u1EC3 v\u01B0\u1EE3t qua b\u1ECDn qu\xE1i v\u1EADt ph\xEDa sau v\u1EADy?"

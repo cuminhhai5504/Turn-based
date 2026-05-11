@@ -24,7 +24,12 @@ public class SaveLoadManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    public bool isMapDialogueDone(string id)
+    {
+        if(cachedData == null) return false;
+        if(cachedData.usedEvents == null) return false;
+        return cachedData.usedEvents.Contains(id);
+    }
     public void SaveGame()
     {
         BattleSaveData data = new BattleSaveData();
