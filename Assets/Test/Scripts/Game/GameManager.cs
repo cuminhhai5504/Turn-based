@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
         SaveProgressAfterBattle();
         Debug.Log("Victory!");
         UIManager.Instance.ShowResult("Victory!");
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx.win);
+        
     }
 
     void LoseGame()
@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
         currentState = GameState.Lose;
         Debug.Log("Defeat!");
         UIManager.Instance.ShowResult("Defeat!");
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx.lose);
+        
     }
     
 }

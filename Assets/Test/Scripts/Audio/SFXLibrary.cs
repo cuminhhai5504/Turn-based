@@ -8,6 +8,5 @@ public class SFXLibrary : ScriptableObject
     public AudioClip item;
     public AudioClip pickup;
     public AudioClip die;
-    public AudioClip win;
-    public AudioClip lose;
+    
 }

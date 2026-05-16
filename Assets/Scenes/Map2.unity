@@ -5863,6 +5863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentState: 0
+  gameEnded: 0
 --- !u!4 &843234316
 Transform:
   m_ObjectHideFlags: 0
@@ -6365,7 +6366,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 10.652444
+      m_AnimationSpeed: 10.580082
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: 3, z: 0}
@@ -6388,7 +6389,7 @@ Tilemap:
       - {fileID: 8313790842667632763, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: 1024707267088520393, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
       - {fileID: -5952541215844301678, guid: 473188d9507f64599a776617a45dcf3f, type: 3}
-      m_AnimationSpeed: 10.83354
+      m_AnimationSpeed: 10.206767
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -10678,8 +10679,8 @@ MonoBehaviour:
   rewardWeapon:
     weaponName: Heavy Bow
     id: 7
-    minRange: 1
-    maxRange: 1
+    minRange: 2
+    maxRange: 2
     damage: 5
     maxDurability: 4
     currentDurability: 4
